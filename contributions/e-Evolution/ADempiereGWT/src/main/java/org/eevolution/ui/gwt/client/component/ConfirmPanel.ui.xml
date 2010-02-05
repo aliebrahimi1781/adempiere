@@ -1,0 +1,31 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:ad="urn:import:org.eevolution.ui.gwt.client.widget">
+	<ui:style>
+		.confirmPanel{
+			padding: 10px;
+		}
+		.leftPanel{
+			text-align: left;
+			position: absolute;
+		}
+		.rigthPanel{
+			text-align: right;
+		}
+	</ui:style>
+	<g:HTMLPanel styleName="{style.confirmPanel}">
+		<div class="{style.leftPanel}">
+			<ad:AButton text="Help" ui:field="helpButton" />			
+			<ad:AButton text="Refresh" ui:field="refreshButton" />			
+			<ad:AButton text="Reset" ui:field="resetButton" />			
+			<ad:AButton text="Customize" ui:field="customizeButton" />			
+			<ad:AButton text="History" ui:field="historyButton" />			
+			<ad:AButton text="Zoom" ui:field="zoomButton" />			
+		</div>
+		<div class="{style.rigthPanel}">
+			<ad:AButton text="Cancel" ui:field="cancelButton" />			
+			<ad:AButton text="Ok" ui:field="okButton" />			
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder> 
