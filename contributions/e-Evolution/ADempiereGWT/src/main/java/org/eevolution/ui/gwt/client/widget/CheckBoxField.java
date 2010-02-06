@@ -13,47 +13,65 @@
  * Copyright (C) 2003-2007 e-Evolution,SC. All Rights Reserved.               *
  * Developer(s): Juan Carlos Perez www.e-evolution.com                        *
  *****************************************************************************/
-package org.eevolution.ui.gwt.client;
+package org.eevolution.ui.gwt.client.widget;
 
-import org.eevolution.ui.gwt.client.component.ConfirmPanel;
-import org.eevolution.ui.gwt.client.widget.CheckBoxField;
-import org.eevolution.ui.gwt.client.widget.DateBoxField;
+import com.google.gwt.user.client.ui.CheckBox;
 
-import com.google.gwt.core.client.EntryPoint;
-import com.google.gwt.event.dom.client.ClickEvent;
-import com.google.gwt.event.dom.client.ClickHandler;
-import com.google.gwt.user.client.Window;
-import com.google.gwt.user.client.ui.Button;
-import com.google.gwt.user.client.ui.RootPanel;
 
 /**
- * ADempiere GWT ADempiereGWT
+ * ADempiere GWT CheckBox
  * @author <a href="mailto:jperezcasanova@gmail.com">Juan Carlos Perez</a>
- * @version $Id: ADempiereGWT.java, v 1.0 Feb 2, 2010
- * Entry point classes define <code>onModuleLoad()</code>.
+ * @version $Id: CheckBox.java, v 1.0 Feb 5, 2010
  */
-public class ADempiereGWT implements EntryPoint, ClickHandler {
+public class CheckBoxField extends CheckBox implements FieldEditor<Boolean>{
+
+	
+	/**
+	 * Default required value
+	 * */
+	private boolean required;
 
 	/**
-	 * This is the entry point method.
+	 * 
 	 */
-	public void onModuleLoad() {
+	public CheckBoxField() {
+	}
 
-		ConfirmPanel cp = new ConfirmPanel(true, true, false,false, false, false,false);
-		cp.addClickHanler(this);
-		RootPanel.get().add(cp);
-		
+	/**
+	 * @param label
+	 */
+	public CheckBoxField(String label) {
+		super(label);
+	}
+
+
+	/**
+	 * @param label
+	 * @param asHTML
+	 */
+	public CheckBoxField(String label, boolean asHTML) {
+		super(label, asHTML);
 	}
 
 	@Override
-	public void onClick(ClickEvent event) {
-		Button button = (Button)event.getSource();
-		if(button.getText().equals("Ok"))
-			Window.alert("Ok was clicked!!!");
-		else if(button.getText().equals("Cancel"))
-			Window.alert("Cancel was clicked!!!");
-		else if(button.getText().equals("Help"))
-			Window.alert("Help was clicked!!!");
-			
+	public Boolean getDisplay() {
+		return super.getValue();
 	}
+
+	@Override
+	public boolean isRequired() {
+		return this.required;
+	}
+
+	@Override
+	public void setBackground(boolean error) {
+
+	}
+
+	@Override
+	public void setRequired(boolean required) {
+		this.required = required;
+	}
+
+
 }

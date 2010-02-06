@@ -15,7 +15,7 @@
  *****************************************************************************/
 package org.eevolution.ui.gwt.client.component;
 
-import org.eevolution.ui.gwt.client.widget.AButton;
+import org.eevolution.ui.gwt.client.widget.Button;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickHandler;
@@ -35,15 +35,15 @@ public class ConfirmPanel extends Composite {
 	interface ConfirmPanelUiBinder extends UiBinder<Widget, ConfirmPanel> {}
 	private static ConfirmPanelUiBinder uiBinder = GWT.create(ConfirmPanelUiBinder.class);
 
-	@UiField AButton cancelButton;
-	@UiField AButton okButton;
+	@UiField Button cancelButton;
+	@UiField Button okButton;
 	
-	@UiField AButton helpButton;
-	@UiField AButton refreshButton;
-	@UiField AButton resetButton;
-	@UiField AButton customizeButton;
-	@UiField AButton historyButton;
-	@UiField AButton zoomButton;
+	@UiField Button helpButton;
+	@UiField Button refreshButton;
+	@UiField Button resetButton;
+	@UiField Button customizeButton;
+	@UiField Button historyButton;
+	@UiField Button zoomButton;
 
 	public ConfirmPanel() {
 		initWidget(uiBinder.createAndBindUi(this));

@@ -16,16 +16,16 @@
 	</ui:style>
 	<g:HTMLPanel styleName="{style.confirmPanel}">
 		<div class="{style.leftPanel}">
-			<ad:AButton text="Help" ui:field="helpButton" />			
-			<ad:AButton text="Refresh" ui:field="refreshButton" />			
-			<ad:AButton text="Reset" ui:field="resetButton" />			
-			<ad:AButton text="Customize" ui:field="customizeButton" />			
-			<ad:AButton text="History" ui:field="historyButton" />			
-			<ad:AButton text="Zoom" ui:field="zoomButton" />			
+			<ad:Button text="Help" ui:field="helpButton" />			
+			<ad:Button text="Refresh" ui:field="refreshButton" />			
+			<ad:Button text="Reset" ui:field="resetButton" />			
+			<ad:Button text="Customize" ui:field="customizeButton" />			
+			<ad:Button text="History" ui:field="historyButton" />			
+			<ad:Button text="Zoom" ui:field="zoomButton" />			
 		</div>
 		<div class="{style.rigthPanel}">
-			<ad:AButton text="Cancel" ui:field="cancelButton" />			
-			<ad:AButton text="Ok" ui:field="okButton" />			
+			<ad:Button text="Cancel" ui:field="cancelButton" />			
+			<ad:Button text="Ok" ui:field="okButton" />			
 		</div>
 	</g:HTMLPanel>
 </ui:UiBinder> 
