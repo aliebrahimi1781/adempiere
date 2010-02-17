@@ -15,16 +15,11 @@
  *****************************************************************************/
 package org.eevolution.ui.gwt.client;
 
-import org.eevolution.ui.gwt.client.component.ConfirmPanel;
-import org.eevolution.ui.gwt.client.widget.CheckBoxField;
-import org.eevolution.ui.gwt.client.widget.DateBoxField;
-
 import com.google.gwt.core.client.EntryPoint;
-import com.google.gwt.event.dom.client.ClickEvent;
-import com.google.gwt.event.dom.client.ClickHandler;
-import com.google.gwt.user.client.Window;
-import com.google.gwt.user.client.ui.Button;
-import com.google.gwt.user.client.ui.RootPanel;
+import com.google.gwt.core.client.GWT;
+import com.google.gwt.user.client.ui.RootLayoutPanel;
+import com.google.gwt.user.client.ui.Widget;
+import com.mvp4g.client.Mvp4gModule;
 
 /**
  * ADempiere GWT ADempiereGWT
@@ -32,28 +27,18 @@ import com.google.gwt.user.client.ui.RootPanel;
  * @version $Id: ADempiereGWT.java, v 1.0 Feb 2, 2010
  * Entry point classes define <code>onModuleLoad()</code>.
  */
-public class ADempiereGWT implements EntryPoint, ClickHandler {
+public class ADempiereGWT implements EntryPoint {
 
 	/**
 	 * This is the entry point method.
 	 */
 	public void onModuleLoad() {
 
-		ConfirmPanel cp = new ConfirmPanel(true, true, false,false, false, false,false);
-		cp.addClickHanler(this);
-		RootPanel.get().add(cp);
+		Mvp4gModule module = (Mvp4gModule) GWT.create(Mvp4gModule.class);
+		module.createAndStartModule();
+		RootLayoutPanel.get().add((Widget) module.getStartView());
 		
 	}
 
-	@Override
-	public void onClick(ClickEvent event) {
-		Button button = (Button)event.getSource();
-		if(button.getText().equals("Ok"))
-			Window.alert("Ok was clicked!!!");
-		else if(button.getText().equals("Cancel"))
-			Window.alert("Cancel was clicked!!!");
-		else if(button.getText().equals("Help"))
-			Window.alert("Help was clicked!!!");
-			
-	}
+	
 }

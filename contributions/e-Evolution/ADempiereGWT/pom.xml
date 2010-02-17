@@ -5,14 +5,49 @@
 	<artifactId>ADempiereGWT</artifactId>
 	<packaging>war</packaging>
 	<version>1.0.0-beta</version>
+	<name>ADempiereGWT</name>
+	<url>http://code.google.com/p/adempiere/</url>
+
+	<organization>
+		<name>e-evolution.org</name>
+		<url>http://www.e-evolution.com/</url>
+	</organization>
+
+	<developers>
+		<developer>
+			<name>Victor Perez Juarez</name>
+			<email>victor.perez@e-evolution.com</email>
+			<organization>e-evolution.org</organization>
+			<organizationUrl>http://www.e-evolution.com/</organizationUrl>
+			<roles>
+				<role>Master Developer / Adempiere Architect</role>
+			</roles>
+		</developer>
+		<developer>
+			<name>Juan Carlos Perez</name>
+			<email>jperezcasanova@gmail.com</email>
+			<organization>e-evolution.org</organization>
+			<organizationUrl>http://www.e-evolution.com/</organizationUrl>
+			<roles>
+				<role>Software Engineer</role>
+			</roles>
+		</developer>
+	</developers>
+
+	<issueManagement>
+		<system>Google Code</system>
+		<url>http://code.google.com/p/adempiere/issues/list</url>
+	</issueManagement>
+
 	<build>
+		<outputDirectory>${basedir}/war/WEB-INF/classes</outputDirectory>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>2.1</version>
 				<configuration>
 					<source>1.6</source>
-  					<target>1.6</target>
+					<target>1.6</target>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -20,38 +55,56 @@
 				<artifactId>gwt-maven-plugin</artifactId>
 				<version>1.2</version>
 				<executions>
-		            <execution>
-		                <goals>
-		                    <goal>compile</goal>
-		                </goals>
-		            </execution>
-        		</executions>
+					<execution>
+						<goals>
+							<goal>compile</goal>
+						</goals>
+					</execution>
+				</executions>
 				<configuration>
 					<runTarget>org.eevolution.ui.gwt.client/index.html</runTarget>
 				</configuration>
 			</plugin>
 			<plugin>
-		        <groupId>org.apache.maven.plugins</groupId>
-		        <artifactId>maven-war-plugin</artifactId>
-		        <version>2.0.2</version>
-		        <configuration>
-		          <warSourceDirectory>war</warSourceDirectory>
-		          <webXml>src/main/webapp/WEB-INF/web.xml</webXml>
-		        </configuration>
-      		</plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.0.2</version>
+				<configuration>
+					<warSourceDirectory>war</warSourceDirectory>
+					<webXml>src/main/webapp/WEB-INF/web.xml</webXml>
+				</configuration>
+			</plugin>
 		</plugins>
-		<outputDirectory>${basedir}/war/WEB-INF/classes</outputDirectory>
 	</build>
+
+	<repositories>
+		<repository>
+		  <id>mvp4g.googlecode.snapshots</id>
+		  <name>Snapshots Repository for Mvp4g</name>
+		  <url>http://mvp4g.googlecode.com/svn/maven2/snapshots/</url>
+		</repository>
+	</repositories>
+
+	<properties>
+		<gwt.version>2.0.1</gwt.version>
+		<mvp4g.version>1.1.0-SNAPSHOT</mvp4g.version>
+	</properties>
+
 	<dependencies>
 		<dependency>
-	        <groupId>com.google.gwt</groupId>
-	        <artifactId>gwt-user</artifactId>
-	        <version>2.0.1</version>
-    	</dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-user</artifactId>
+			<version>${gwt.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>com.google.gwt</groupId>
 			<artifactId>gwt-servlet</artifactId>
-			<version>2.0.1</version>
+			<version>${gwt.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.googlecode.mvp4g</groupId>
+			<artifactId>mvp4g</artifactId>
+			<version>${mvp4g.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
@@ -65,4 +118,10 @@
 			<version>1.0.0</version>
 		</dependency>
 	</dependencies>
+
+	<scm>
+		<connection>scm:hg:https://adempiere.googlecode.com/hg/contributions/e-Evolution/ADempiereGWT/</connection>
+		<developerConnection>scm:svn:hg:https://adempiere.googlecode.com/hg/contributions/e-Evolution/ADempiereGWT/</developerConnection>
+		<url>http://code.google.com/p/adempiere/source/browse/#hg/contributions/e-Evolution/ADempiereGWT</url>
+	</scm>
 </project>
