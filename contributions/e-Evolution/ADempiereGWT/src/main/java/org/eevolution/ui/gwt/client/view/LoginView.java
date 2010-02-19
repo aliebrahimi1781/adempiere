@@ -15,11 +15,14 @@
  *****************************************************************************/
 package org.eevolution.ui.gwt.client.view;
 
+import org.eevolution.ui.gwt.client.component.ConfirmPanel;
 import org.eevolution.ui.gwt.client.presenter.LoginPresenter.ILoginView;
 import org.eevolution.ui.gwt.client.widget.Dialog;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;
+import com.google.gwt.uibinder.client.UiField;
+import com.google.gwt.user.client.ui.TabLayoutPanel;
 import com.google.gwt.user.client.ui.Widget;
 
 /**
@@ -35,10 +38,12 @@ public class LoginView extends Dialog implements ILoginView {
 	interface LoginViewUiBinder extends UiBinder<Widget, LoginView> {
 	}
 
+	@UiField TabLayoutPanel tabs;
+	@UiField ConfirmPanel confirmPanel;
+	
 	public LoginView() {
 		setWidget(uiBinder.createAndBindUi(this));
 		setText("Login");
-		setAnimationEnabled(true);
 	    setGlassEnabled(true);
 	}
 

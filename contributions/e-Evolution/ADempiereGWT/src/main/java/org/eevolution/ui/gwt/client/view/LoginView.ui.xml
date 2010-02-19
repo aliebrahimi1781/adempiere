@@ -1,10 +1,123 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
-	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:ad="urn:import:org.eevolution.ui.gwt.client.widget"
+	xmlns:adc="urn:import:org.eevolution.ui.gwt.client.component">
 	<ui:style>
 		/* Add CSS here. See the GWT docs on UI Binder for more details */
 	</ui:style>
-	<g:HTMLPanel>
-		Login code must be implemented here
-	</g:HTMLPanel>
+	<g:VerticalPanel>
+		<g:cell>
+			<g:TabLayoutPanel barUnit='PX' barHeight='40'
+				ui:field="tabs" width="350px" height="230px">
+				<g:tab>
+					<g:header>Connection</g:header>
+					<g:VerticalPanel width='100%'>
+						<g:cell>
+							<g:HorizontalPanel width='100%'>
+								<g:cell horizontalAlignment='ALIGN_RIGHT' width='50%'>
+									<g:Image url='logo.jpg' />
+								</g:cell>
+								<g:cell horizontalAlignment='ALIGN_RIGHT' width='50%'>
+									<g:Label>Release 3.3.0</g:Label>
+								</g:cell>
+							</g:HorizontalPanel>
+						</g:cell>
+						<g:cell>
+							<g:HorizontalPanel width='100%'>
+								<g:cell horizontalAlignment='ALIGN_LEFT'>
+									<g:Label>Smart Suite ERP, CRM and SRM</g:Label>
+								</g:cell>
+							</g:HorizontalPanel>
+						</g:cell>
+						<g:cell>
+							<g:HorizontalPanel width='100%'>
+								<g:cell horizontalAlignment='ALIGN_CENTER' width='25%'>
+									<ad:LabelField ui:field='lblUserId' text='User ID:' />
+								</g:cell>
+								<g:cell horizontalAlignment='ALIGN_LEFT' width='75%'>
+									<ad:TextField ui:field='txtUserId' />
+								</g:cell>
+							</g:HorizontalPanel>
+						</g:cell>
+						<g:cell>
+							<g:HorizontalPanel width='100%'>
+								<g:cell horizontalAlignment='ALIGN_CENTER' width='25%'>
+									<ad:LabelField ui:field='lblPassword' text='Password:' />
+								</g:cell>
+								<g:cell horizontalAlignment='ALIGN_LEFT' width='75%'>
+									<ad:PasswordTextField ui:field='txtPassword' />
+								</g:cell>
+							</g:HorizontalPanel>
+						</g:cell>
+						<g:cell>
+							<g:HorizontalPanel width='100%'>
+								<g:cell horizontalAlignment='ALIGN_CENTER' width='25%'>
+									<ad:LabelField ui:field='lblLanguage' text='Language:' />
+								</g:cell>
+								<g:cell horizontalAlignment='ALIGN_LEFT' width='75%'>
+									<ad:ComboBoxField ui:field='lstLanguage'
+										visibleItemCount='1' />
+								</g:cell>
+							</g:HorizontalPanel>
+						</g:cell>
+					</g:VerticalPanel>
+				</g:tab>
+				<g:tab>
+					<g:header>Default</g:header>
+					<g:VerticalPanel width='100%'>
+						<g:cell>
+							<g:HorizontalPanel width='100%'>
+								<g:cell horizontalAlignment='ALIGN_CENTER' width='25%'>
+									<ad:LabelField ui:field='lblRole' text='Role:' />
+								</g:cell>
+								<g:cell horizontalAlignment='ALIGN_LEFT' width='75%'>
+									<ad:ComboBoxField ui:field='lstRole'
+										visibleItemCount='1' />
+								</g:cell>
+							</g:HorizontalPanel>
+						</g:cell>
+						<g:cell>
+							<g:HorizontalPanel width='100%'>
+								<g:cell horizontalAlignment='ALIGN_CENTER' width='25%'>
+									<ad:LabelField ui:field='lblClient' text='Client:' />
+								</g:cell>
+								<g:cell horizontalAlignment='ALIGN_LEFT' width='75%'>
+									<ad:ComboBoxField ui:field='lstClient'
+										visibleItemCount='1' />
+								</g:cell>
+							</g:HorizontalPanel>
+						</g:cell>
+						<g:cell>
+							<g:HorizontalPanel width='100%'>
+								<g:cell horizontalAlignment='ALIGN_CENTER' width='25%'>
+									<ad:LabelField ui:field='lblOrganisation' text='Organization:' />
+								</g:cell>
+								<g:cell horizontalAlignment='ALIGN_LEFT' width='75%'>
+									<ad:ComboBoxField ui:field='lstOrganisation'
+										visibleItemCount='1' />
+								</g:cell>
+							</g:HorizontalPanel>
+						</g:cell>
+						<g:cell>
+							<g:HorizontalPanel width='100%'>
+								<g:cell horizontalAlignment='ALIGN_CENTER' width='25%'>
+									<ad:LabelField ui:field='lblWarehouse' text='Warehouse:' />
+								</g:cell>
+								<g:cell horizontalAlignment='ALIGN_LEFT' width='75%'>
+									<ad:ComboBoxField ui:field='lstWarehouse'
+										visibleItemCount='1' />
+								</g:cell>
+							</g:HorizontalPanel>
+						</g:cell>
+					</g:VerticalPanel>
+				</g:tab>
+			</g:TabLayoutPanel>
+		</g:cell>
+		<g:cell>
+			<adc:ConfirmPanel ui:field="confirmPanel"
+				withCancelButton="true" withHelpButton="true" withRefreshButton="false"
+				withResetButton="false" withCustomizeButton="false"
+				withHistoryButton="false" withZoomButton="false" />
+		</g:cell>
+	</g:VerticalPanel>
 </ui:UiBinder> 
