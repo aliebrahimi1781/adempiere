@@ -15,73 +15,64 @@
  *****************************************************************************/
 package org.eevolution.ui.gwt.client.widget;
 
-import org.eevolution.ui.gwt.client.data.Lookup;
+import java.util.Date;
 
-import com.google.gwt.user.client.ui.ListBox;
+import com.google.gwt.i18n.client.DateTimeFormat;
+import com.google.gwt.user.datepicker.client.DateBox;
+import com.google.gwt.user.datepicker.client.DatePicker;
+
+
 
 /**
- * ADempiere GWT ComboBox
+ * ADempiere GWT DateTimeBox
  * @author <a href="mailto:jperezcasanova@gmail.com">Juan Carlos Perez</a>
- * @version $Id: ComboBox.java, v 1.0 Feb 5, 2010
+ * @version $Id: DateTimeBox.java, v 1.0 Feb 23, 2010
  */
-public class ComboBoxField extends ListBox implements FieldEditor<Lookup>{
+public class DateTimeBox extends DateBox {
 
-	
-	/**
-	 * Value for Lookup
-	 */
-	private Lookup lookup = new Lookup();
-	
 	/**
 	 * Identifier for required field
 	 */
 	private boolean required;
 	
 	/**
+	 * Identifier for enabled field
+	 */
+	private boolean enabled;
+	
+	/**
 	 * 
 	 */
-	public ComboBoxField() {
+	public DateTimeBox() {
+		super();
+		DateTimeFormat dateFormat = DateTimeFormat.getFormat("MM/dd/yyyy h:mm");
+	    setFormat(new DateBox.DefaultFormat(dateFormat));
 	}
 
 	/**
-	 * @param isMultipleSelect
+	 * @param picker
+	 * @param date
+	 * @param format
 	 */
-	public ComboBoxField(boolean isMultipleSelect) {
-		super(isMultipleSelect);
+	public DateTimeBox(DatePicker picker, Date date, Format format) {
+		super(picker, date, format);
+	}
+	
+	public boolean isEnabled() {
+		return this.enabled;
 	}
 
-	@Override
-	public Lookup getDisplay() {
-		return lookup;
-	}
-
-	@Override
-	public Lookup getValue() {
-		return lookup;
-	}
-
-	@Override
 	public boolean isRequired() {
 		return this.required;
 	}
 
-	@Override
-	public void setBackground(boolean error) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public void setRequired(boolean required) {
 		this.required = required;
 	}
 
-	@Override
-	public void setValue(Lookup value) {
-		if(value != null){
-			addItem(value.getKey(), value.getValue());
-			lookup = value;
-		}
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
+		super.setEnabled(enabled);
 	}
-
+	
 }

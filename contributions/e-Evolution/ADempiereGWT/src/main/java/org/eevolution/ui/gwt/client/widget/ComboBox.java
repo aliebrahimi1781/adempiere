@@ -15,75 +15,58 @@
  *****************************************************************************/
 package org.eevolution.ui.gwt.client.widget;
 
-import java.util.Date;
+import org.eevolution.ui.gwt.client.data.Lookup;
 
-import com.google.gwt.user.datepicker.client.DateBox;
-import com.google.gwt.user.datepicker.client.DatePicker;
 
 /**
- * ADempiere GWT DateBoxField
+ * ADempiere GWT ComboBox
  * @author <a href="mailto:jperezcasanova@gmail.com">Juan Carlos Perez</a>
- * @version $Id: DateBoxField.java, v 1.0 Feb 5, 2010
+ * @version $Id: ComboBox.java, v 1.0 Feb 5, 2010
  */
-public class DateBoxField extends DateBox implements FieldEditor<Date> {
+public class ComboBox extends com.google.gwt.user.client.ui.ListBox{
 
+	
+	/**
+	 * Value for Lookup
+	 */
+	private Lookup lookup = new Lookup();
+	
 	/**
 	 * Identifier for required field
 	 */
 	private boolean required;
 	
 	/**
-	 * Identifier for enabled field
-	 */
-	private boolean enabled;
-	
-	/**
 	 * 
 	 */
-	public DateBoxField() {
+	public ComboBox() {
+		super(false);
 	}
 
 	/**
-	 * @param picker
-	 * @param date
-	 * @param format
+	 * @param isMultipleSelect
 	 */
-	public DateBoxField(DatePicker picker, Date date, Format format) {
-		super(picker, date, format);
+	public ComboBox(boolean isMultipleSelect) {
+		super(isMultipleSelect);
 	}
 
-	@Override
-	public Date getDisplay() {
-		return getValue();
+	public Lookup getValue() {
+		return lookup;
 	}
 
-	@Override
-	public boolean isEnabled() {
-		return this.enabled;
-	}
-
-	@Override
 	public boolean isRequired() {
 		return this.required;
 	}
 
-	@Override
-	public void setBackground(boolean error) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public void setRequired(boolean required) {
 		this.required = required;
 	}
 
-	@Override
-	public void setEnabled(boolean enabled) {
-		this.enabled = enabled;
-		super.setEnabled(enabled);
+	public void setValue(Lookup value) {
+		if(value != null){
+			addItem(value.getKey(), value.getValue());
+			lookup = value;
+		}
 	}
-	
-	
 
 }

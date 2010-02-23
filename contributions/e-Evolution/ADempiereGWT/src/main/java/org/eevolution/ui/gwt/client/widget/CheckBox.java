@@ -15,46 +15,57 @@
  *****************************************************************************/
 package org.eevolution.ui.gwt.client.widget;
 
-import com.google.gwt.user.client.ui.TextBox;
+import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.event.shared.HandlerRegistration;
+
+
 
 /**
- * ADempiere GWT TextField
+ * ADempiere GWT CheckBox
  * @author <a href="mailto:jperezcasanova@gmail.com">Juan Carlos Perez</a>
- * @version $Id: TextField.java, v 1.0 Feb 5, 2010
+ * @version $Id: CheckBox.java, v 1.0 Feb 5, 2010
  */
-public class TextField extends TextBox implements FieldEditor<String> {
+public class CheckBox extends com.google.gwt.user.client.ui.CheckBox {
 
-	/**
-	 * Identifier for required field
-	 */
-	private boolean required;
 	
+	/**
+	 * Default required value
+	 * */
+	private boolean required;
+
 	/**
 	 * 
 	 */
-	public TextField() {
+	public CheckBox() {
 	}
 
-	@Override
-	public String getDisplay() {
-		return getValue();
+	/**
+	 * @param label
+	 */
+	public CheckBox(String label) {
+		super(label);
 	}
 
-	@Override
+
+	/**
+	 * @param label
+	 * @param asHTML
+	 */
+	public CheckBox(String label, boolean asHTML) {
+		super(label, asHTML);
+	}
+
 	public boolean isRequired() {
 		return this.required;
 	}
 
-	@Override
-	public void setBackground(boolean error) {
-		// TODO Auto-generated method stub
-		
+	public void setRequired(boolean required) {
+		this.required = required;
 	}
 
 	@Override
-	public void setRequired(boolean required) {
-		this.required = required;
-		
+	public HandlerRegistration addClickHandler(ClickHandler handler) {
+		return super.addClickHandler(handler);
 	}
 
 }

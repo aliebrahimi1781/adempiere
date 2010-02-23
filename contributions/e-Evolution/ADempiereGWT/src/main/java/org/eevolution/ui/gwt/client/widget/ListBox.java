@@ -15,44 +15,58 @@
  *****************************************************************************/
 package org.eevolution.ui.gwt.client.widget;
 
-import com.google.gwt.event.dom.client.ClickHandler;
+import org.eevolution.ui.gwt.client.data.Lookup;
 
 
 /**
- * ADempiere GWT AButton
+ * ADempiere GWT ListBox
  * @author <a href="mailto:jperezcasanova@gmail.com">Juan Carlos Perez</a>
- * @version $Id: AButton.java, v 1.0 Feb 2, 2010
+ * @version $Id: ListBox.java, v 1.0 Feb 5, 2010
  */
-public class Button extends com.google.gwt.user.client.ui.Button{
+public class ListBox extends com.google.gwt.user.client.ui.ListBox{
 
-
-
+	
+	/**
+	 * Value for Lookup
+	 */
+	private Lookup lookup = new Lookup();
+	
+	/**
+	 * Identifier for required field
+	 */
+	private boolean required;
+	
 	/**
 	 * 
 	 */
-	public Button() {
-		super();
+	public ListBox() {
+		super(true);
 	}
 
 	/**
-	 * @param html
-	 * @param handler
+	 * @param isMultipleSelect
 	 */
-	public Button(String html, ClickHandler handler) {
-		super(html, handler);
+	public ListBox(boolean isMultipleSelect) {
+		super(isMultipleSelect);
 	}
 
-	/**
-	 * @param html
-	 */
-	public Button(String html) {
-		super(html);
-	}
-	
-
-	public void addClickListener(ClickHandler handler) {
-		addClickHandler(handler);
+	public Lookup getValue() {
+		return lookup;
 	}
 
+	public boolean isRequired() {
+		return this.required;
+	}
+
+	public void setRequired(boolean required) {
+		this.required = required;
+	}
+
+	public void setValue(Lookup value) {
+		if(value != null){
+			addItem(value.getKey(), value.getValue());
+			lookup = value;
+		}
+	}
 
 }

@@ -12,6 +12,7 @@
 
   <!-- Other module inherits                                      -->
   <inherits name='com.mvp4g.Mvp4gModule' />
+  <inherits name="com.allen_sauer.gwt.log.gwt-log-DEBUG" />
 
   <!-- Specify the app entry point class.                         -->
   <entry-point class='org.eevolution.ui.gwt.client.ADempiereGWT'/>

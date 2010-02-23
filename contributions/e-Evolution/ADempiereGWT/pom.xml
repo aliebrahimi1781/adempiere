@@ -79,9 +79,9 @@
 
 	<repositories>
 		<repository>
-		  <id>mvp4g.googlecode.snapshots</id>
-		  <name>Snapshots Repository for Mvp4g</name>
-		  <url>http://mvp4g.googlecode.com/svn/maven2/snapshots/</url>
+			<id>mvp4g.googlecode.snapshots</id>
+			<name>Snapshots Repository for Mvp4g</name>
+			<url>http://mvp4g.googlecode.com/svn/maven2/snapshots/</url>
 		</repository>
 	</repositories>
 
@@ -105,6 +105,11 @@
 			<groupId>com.googlecode.mvp4g</groupId>
 			<artifactId>mvp4g</artifactId>
 			<version>${mvp4g.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.gwt-log</groupId>
+			<artifactId>gwt-log</artifactId>
+			<version>2.6.2</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>

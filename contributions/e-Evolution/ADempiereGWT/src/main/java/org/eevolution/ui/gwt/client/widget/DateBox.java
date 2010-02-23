@@ -15,67 +15,59 @@
  *****************************************************************************/
 package org.eevolution.ui.gwt.client.widget;
 
-import com.google.gwt.user.client.ui.HasHorizontalAlignment;
-import com.google.gwt.user.client.ui.Label;
+import java.util.Date;
 
-
-
+import com.google.gwt.user.datepicker.client.DatePicker;
 
 /**
- * ADempiere GWT Label
+ * ADempiere GWT DateBox
  * @author <a href="mailto:jperezcasanova@gmail.com">Juan Carlos Perez</a>
- * @version $Id: Label.java, v 1.0 Feb 5, 2010
+ * @version $Id: DateBox.java, v 1.0 Feb 5, 2010
  */
-public class LabelField extends Label {
+public class DateBox extends com.google.gwt.user.datepicker.client.DateBox {
 
-	public enum HorizontalAlignment{
-		CENTER,
-		LEFT,
-		RIGTH
-	}
+	/**
+	 * Identifier for required field
+	 */
+	private boolean required;
+	
+	/**
+	 * Identifier for enabled field
+	 */
+	private boolean enabled;
 	
 	/**
 	 * 
 	 */
-	public LabelField() {
+	public DateBox() {
 	}
 
 	/**
-	 * @param text
+	 * @param picker
+	 * @param date
+	 * @param format
 	 */
-	public LabelField(String text) {
-		super(text);
-	}
-	
-	
-	/**
-	 * @param text
-	 */
-	public LabelField(String text, HorizontalAlignment align) {
-		super(text);
-		if(align.equals(HorizontalAlignment.CENTER))
-			setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
-		else if(align.equals(HorizontalAlignment.LEFT))
-			setHorizontalAlignment(HasHorizontalAlignment.ALIGN_LEFT);
-		else
-			setHorizontalAlignment(HasHorizontalAlignment.ALIGN_RIGHT);
+	public DateBox(DatePicker picker, Date date, Format format) {
+		super(picker, date, format);
 	}
 
-	
 
-	/**
-	 * @param text
-	 * @param wordWrap
-	 */
-	public LabelField(String text, boolean wordWrap) {
-		super(text, wordWrap);
+	public boolean isEnabled() {
+		return this.enabled;
+	}
+
+	public boolean isRequired() {
+		return this.required;
+	}
+
+	public void setRequired(boolean required) {
+		this.required = required;
+	}
+
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
+		super.setEnabled(enabled);
 	}
 	
-	/**
-	 * Method to set the label for
-	 */
-	public void setLabelFor(){
-		//TODO: Implement this method
-	}
 
 }

@@ -15,63 +15,84 @@
  *****************************************************************************/
 package org.eevolution.ui.gwt.client.widget;
 
-import com.google.gwt.user.client.ui.CheckBox;
+import com.google.gwt.user.client.ui.HasHorizontalAlignment;
+
+
 
 
 /**
- * ADempiere GWT CheckBox
+ * ADempiere GWT Label
  * @author <a href="mailto:jperezcasanova@gmail.com">Juan Carlos Perez</a>
- * @version $Id: CheckBox.java, v 1.0 Feb 5, 2010
+ * @version $Id: Label.java, v 1.0 Feb 5, 2010
  */
-public class CheckBoxField extends CheckBox implements FieldEditor<Boolean>{
+public class Label extends com.google.gwt.user.client.ui.Label {
 
+	public enum HorizontalAlignment{
+		CENTER,
+		LEFT,
+		RIGTH
+	}
 	
-	/**
-	 * Default required value
-	 * */
-	private boolean required;
-
+	 private boolean required;
+	
 	/**
 	 * 
 	 */
-	public CheckBoxField() {
+	public Label() {
 	}
 
 	/**
-	 * @param label
+	 * @param text
 	 */
-	public CheckBoxField(String label) {
-		super(label);
+	public Label(String text) {
+		super(text);
+	}
+	
+	
+	/**
+	 * @param text
+	 */
+	public Label(String text, HorizontalAlignment align) {
+		super(text);
+		if(align.equals(HorizontalAlignment.CENTER))
+			setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
+		else if(align.equals(HorizontalAlignment.LEFT))
+			setHorizontalAlignment(HasHorizontalAlignment.ALIGN_LEFT);
+		else
+			setHorizontalAlignment(HasHorizontalAlignment.ALIGN_RIGHT);
 	}
 
+	
 
 	/**
-	 * @param label
-	 * @param asHTML
+	 * @param text
+	 * @param wordWrap
 	 */
-	public CheckBoxField(String label, boolean asHTML) {
-		super(label, asHTML);
+	public Label(String text, boolean wordWrap) {
+		super(text, wordWrap);
+	}
+	
+	/**
+	 * Method to set the label for
+	 */
+	public void setLabelFor(){
+		//TODO: Implement this method
 	}
 
-	@Override
-	public Boolean getDisplay() {
-		return super.getValue();
-	}
-
-	@Override
+	/**
+	 * @return the required
+	 */
 	public boolean isRequired() {
-		return this.required;
+		return required;
 	}
 
-	@Override
-	public void setBackground(boolean error) {
-
-	}
-
-	@Override
+	/**
+	 * @param required the required to set
+	 */
 	public void setRequired(boolean required) {
 		this.required = required;
 	}
-
+	
+	
 
 }
