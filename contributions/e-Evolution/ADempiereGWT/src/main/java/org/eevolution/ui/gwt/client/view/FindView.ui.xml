@@ -1,0 +1,113 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:ad="urn:import:org.eevolution.ui.gwt.client.widget"
+	xmlns:adc="urn:import:org.eevolution.ui.gwt.client.component">
+		<ui:style>
+		.FindView{
+			padding: 10px;
+		}
+		.leftPanel{
+			text-align: left;
+			position: absolute;
+		}
+		.rigthPanel{
+			text-align: right;
+		}
+	</ui:style>
+	<g:VerticalPanel>
+		<g:cell>
+			<g:TabLayoutPanel ui:field='tabs' barUnit='PX' barHeight='40' width='350px' height='200px'>
+				<g:tab>
+					<g:header>LookUp Record</g:header>
+					<g:VerticalPanel width ='100%' height = '100%'>
+						<g:cell>
+							<g:HorizontalPanel width='100%' height='100%'>
+								<g:cell horizontalAlignment='ALIGN_RIGHT' width='50%'>
+									<ad:Label ui:field='lblValue'/>
+								</g:cell>
+								<g:cell horizontalAlignment='ALIGN_RIGHT' width='50%'>
+									<ad:TextBox ui:field='fieldValue'/>
+								</g:cell>
+							</g:HorizontalPanel>
+						</g:cell>
+						<g:cell>
+							<g:HorizontalPanel width='100%' height='100%'>
+								<g:cell horizontalAlignment='ALIGN_RIGHT' width='50%'>
+									<ad:Label ui:field='lblName'/>
+								</g:cell>
+								<g:cell horizontalAlignment='ALIGN_RIGHT' width='50%'>
+									<ad:TextBox ui:field='fieldName'/>
+								</g:cell>
+							</g:HorizontalPanel>
+						</g:cell>
+						<g:cell>
+							<g:HorizontalPanel width='100%' height='100%'>
+								<g:cell horizontalAlignment='ALIGN_RIGHT' width='50%'>
+									<ad:Label ui:field='lblDocumentNo'/>
+								</g:cell>
+								<g:cell horizontalAlignment='ALIGN_RIGHT' width='50%'>
+									<ad:TextBox ui:field='fieldDocumentNo'/>
+								</g:cell>
+							</g:HorizontalPanel>
+						</g:cell>
+						<g:cell>
+							<g:HorizontalPanel width='100%' height='100%'>
+								<g:cell horizontalAlignment='ALIGN_RIGHT' width='50%'>
+									<ad:Label ui:field='lblDescription'/>
+								</g:cell>
+								<g:cell horizontalAlignment='ALIGN_RIGHT' width='50%'>
+									<ad:TextBox ui:field='fieldDescription'/>
+								</g:cell>
+							</g:HorizontalPanel>
+						</g:cell>
+						<g:cell>
+							<g:HTMLPanel styleName="{style.FindView}">
+								<div class="{style.leftPanel}">
+									<ad:Button  ui:field='btnNew' />
+								</div>	
+								<div class="{style.rigthPanel}">
+									<ad:Button ui:field='btnCancel' />			
+									<ad:Button ui:field='btnOk' />			
+								</div>
+							</g:HTMLPanel>
+						</g:cell>
+					</g:VerticalPanel>
+				</g:tab>
+				<g:tab>		
+				<g:header>Advanced</g:header>
+
+					<g:VerticalPanel width ='100%' height = '100%'>
+						<g:cell height='20%'>
+							<g:HorizontalPanel width='100%'>
+								<g:cell width='15%'>
+									<ad:Button ui:field='btnNewAdv'/>
+								</g:cell>
+								<g:cell width='50%'>
+									<ad:ComboBox ui:field='fQueryName' width='100%'/>
+								</g:cell>
+								<g:cell with='20%'>
+									<ad:Button ui:field='btnDeleteAdv'/>
+								</g:cell>
+								<g:cell width='15%'>
+									<ad:Button ui:field='btnSaveAdv'/>
+								</g:cell>
+							</g:HorizontalPanel>
+						</g:cell>
+						<g:cell height='60%'>
+							<g:HorizontalPanel height = '100%'>
+							
+							</g:HorizontalPanel>
+						</g:cell>
+						<g:cell height='20%'>
+							<adc:ConfirmPanel ui:field='confirmPanel'
+							withCancelButton='true' withHelpButton='false' withRefreshButton='true'
+							withResetButton='false' withCustomizeButton='false'
+							withHistoryButton='false' withZoomButton='false'
+							/>
+						</g:cell>
+					</g:VerticalPanel>
+				</g:tab>
+			</g:TabLayoutPanel>
+		</g:cell>
+	</g:VerticalPanel>
+</ui:UiBinder> 
