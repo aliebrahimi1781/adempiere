@@ -1,3 +1,4 @@
+//TODO:Copyright message should go here
 package org.eevolution.ui.gwt.client.view;
 
 import org.eevolution.ui.gwt.client.component.ConfirmPanel;

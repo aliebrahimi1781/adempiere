@@ -1,3 +1,4 @@
+//TODO:Copyright message should go here
 package org.eevolution.ui.gwt.client.component;
 
 import org.eevolution.ui.gwt.client.widget.Label;
