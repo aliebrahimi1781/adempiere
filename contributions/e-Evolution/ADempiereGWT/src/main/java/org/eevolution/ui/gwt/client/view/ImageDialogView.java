@@ -1,4 +1,4 @@
-//TODO:Copyright message should go here
+//TODO:Copyright message should go here!
 
 package org.eevolution.ui.gwt.client.view;
 
@@ -18,7 +18,7 @@ import com.google.gwt.user.client.ui.Widget;
 
 /**
  * ADempiere GWT ImageDialogView
- * @author <a href="mailto:alberto.juarez@e-evolution.com">Alberto Juarez Caballero</a>
+ * @author <a href="mailto:alberto.juarez@e-evolution.com">Alberto Juarez Caballero, www.e-evolution.com</a>
  * @version $Id: ImageDialogView.java, v 1.0 Feb 23, 2010
  */
 

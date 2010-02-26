@@ -1,21 +1,21 @@
-//TODO:Copyright message should go here
+//TODO:Copyright message should go here!
 package org.eevolution.ui.gwt.client.presenter;
 
 
 
 import org.eevolution.ui.gwt.client.ApplicationEventBus;
-import org.eevolution.ui.gwt.client.view.GraphView;
+//import org.eevolution.ui.gwt.client.view.GraphView;
 import com.google.gwt.user.client.ui.Widget;
 import com.mvp4g.client.annotation.Presenter;
 import com.mvp4g.client.presenter.BasePresenter;
 
 /**
  * ADempiere GWT GraphPresenter
- * @author <a href="mailto:alberto.juarez@e-evolution.com">Alberto Juarez Caballero</a>
+ * @author <a href="mailto:alberto.juarez@e-evolution.com">Alberto Juarez Caballero , www.e-evolution.com</a>
  * @version $Id: GraphPresenter.java, v 1.0 Feb 19, 2010
  */
 
-@Presenter(view=GraphView.class)
+//@Presenter(view=GraphView.class)
 public class GraphPresenter extends BasePresenter<GraphPresenter.IGraphView,ApplicationEventBus> {
 	public interface IGraphView{
 		
