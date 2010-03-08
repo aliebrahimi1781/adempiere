@@ -45,7 +45,7 @@ public class TreeMenuPresenter extends BasePresenter<TreeMenuPresenter.ITreeView
 	}
 
 	public void onInitialize(){
-		// TODO Auto-generated method stub
+		eventBus.setWest(view.getViewWidget());
 	}
 
 	public void onOpenWindow(){

@@ -19,6 +19,8 @@ import org.eevolution.ui.gwt.client.presenter.TopBarPresenter.ITopBarView;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;
+import com.google.gwt.uibinder.client.UiField;
+import com.google.gwt.user.client.ui.Anchor;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Widget;
 
@@ -35,6 +37,10 @@ public class TopBarView extends Composite implements ITopBarView {
 	interface TopBarViewUiBinder extends UiBinder<Widget, TopBarView> {
 	}
 
+	@UiField Anchor preferenceLink;
+	@UiField Anchor SystemLink;
+	@UiField Anchor logoutLink;
+	
 	public TopBarView() {
 		initWidget(uiBinder.createAndBindUi(this));
 	}

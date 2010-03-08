@@ -4,11 +4,20 @@
 	<ui:style>
 		/* Add CSS here. See the GWT docs on UI Binder for more details */
 	</ui:style>
-	<g:HTMLPanel>
-		<!--
-			Add GWT widgets here. Enter < and hit Ctrl-Space to auto-complete
-			widget names. The ui:field attribute binds an element to a field in
-			the owner class. See the GWT docs on UI Binder for more details.
-		-->
-	</g:HTMLPanel>
+	<g:DockLayoutPanel unit='EM'>
+		<g:north size='8'>
+			<g:SimplePanel ui:field='topPanel' />
+		</g:north>
+
+		<g:center>
+			<g:SplitLayoutPanel>
+				<g:west size='192'>
+					<g:LayoutPanel ui:field='treeMenu' />
+				</g:west>
+				<g:center>
+					<g:LayoutPanel ui:field='contentPanel' />
+				</g:center>
+			</g:SplitLayoutPanel>
+		</g:center>
+	</g:DockLayoutPanel>
 </ui:UiBinder> 

@@ -41,16 +41,16 @@ public class ApplicationPresenter extends BasePresenter<ApplicationPresenter.IAp
 	}
 	
 	public void onSetNorth(Widget w){
-		// TODO Auto-generated method stub
+		view.setTopBar(w);
 	}
 	
 	public void onSetCenter(Widget w){
-		// TODO Auto-generated method stub
+		view.setContent(w);
 		
 	}
 
 	public void onSetWest(Widget w){
-		// TODO Auto-generated method stub
+		view.setTreeMenu(w);
 		
 	}
 }

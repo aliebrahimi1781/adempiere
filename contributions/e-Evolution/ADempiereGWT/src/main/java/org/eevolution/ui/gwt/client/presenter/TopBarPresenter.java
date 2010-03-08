@@ -38,6 +38,6 @@ public class TopBarPresenter extends BasePresenter<TopBarPresenter.ITopBarView, 
 	}
 	
 	public void onInitialize(){
-		// TODO Auto-generated method stub
+		eventBus.setNorth(view.getViewWidget());
 	}
 }

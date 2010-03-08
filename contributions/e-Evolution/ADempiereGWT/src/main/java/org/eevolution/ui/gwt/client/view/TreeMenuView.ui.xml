@@ -1,14 +1,81 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
-	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:ad="urn:import:org.eevolution.ui.gwt.client.widget">
 	<ui:style>
-		/* Add CSS here. See the GWT docs on UI Binder for more details */
+		.menuTree {
+			border: 1px solid #92c1f0;
+			background-color: white;
+		}
+		
+		.header {
+			font-size: 1.2em;
+			font-weight: bold;
+			background: #d0e4f6;
+			border-bottom: 1px solid #92c1f0;
+			padding: .7em .5em 0 .6em;
+		}
+		
+		.suggestBox {
+			font-size: 1em;
+			font-weight: bold;
+			background: #d0e4f6;
+			border-bottom: 1px solid #92c1f0;
+			padding: .7em .5em 0 .6em;
+			width: 100%;
+		}
+		
+		.footer {
+			background: #d0e4f6;
+			border-top: 1px solid #92c1f0;
+			padding: 0.5em;
+		}
+		
+		.headerItem {
+			margin-bottom: 0.5em;
+		}
+		
+		.body {
+			line-height: 150%;
+			padding: 20px 40px 20px 10px;
+			font-family: 'Times New Roman', Times, serif;
+		}
+		
+		@sprite .appImage {
+			gwt-image: 'appIcon';
+			padding-top: 1em;
+			float: left;
+		}
 	</ui:style>
-	<g:HTMLPanel>
-		<!--
-			Add GWT widgets here. Enter < and hit Ctrl-Space to auto-complete
-			widget names. The ui:field attribute binds an element to a field in
-			the owner class. See the GWT docs on UI Binder for more details.
-		-->
-	</g:HTMLPanel>
+
+	<ui:image field='appIcon' src='../resources/Process16.gif' />
+
+	<g:DockLayoutPanel unit='EM' styleName='{style.menuTree}'>
+		<g:north size='3'>
+			<g:HTMLPanel styleName='{style.header}'>
+				<div class='{style.appImage}' />
+				Application
+			</g:HTMLPanel>
+		</g:north>
+
+		<g:center>
+			<g:DockLayoutPanel unit='EM'>
+				<g:north size='3.5'>
+					<g:VerticalPanel styleName='{style.suggestBox}'
+						ui:field="suggestPanel">
+					</g:VerticalPanel>
+				</g:north>
+				<g:center>
+					<g:ScrollPanel>
+						<g:Tree ui:field="treeMenu" />
+					</g:ScrollPanel>
+				</g:center>
+			</g:DockLayoutPanel>
+		</g:center>
+		<g:south size='2'>
+			<g:HTMLPanel styleName='{style.footer}'>
+				<ad:CheckBox ui:field="expandChk">Expand Tree</ad:CheckBox>
+			</g:HTMLPanel>
+		</g:south>
+	</g:DockLayoutPanel>
 </ui:UiBinder> 

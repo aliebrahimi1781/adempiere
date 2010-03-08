@@ -20,6 +20,7 @@ import org.eevolution.ui.gwt.client.presenter.ContentPresenter;
 import org.eevolution.ui.gwt.client.presenter.LoginPresenter;
 import org.eevolution.ui.gwt.client.presenter.TopBarPresenter;
 import org.eevolution.ui.gwt.client.presenter.TreeMenuPresenter;
+import org.eevolution.ui.gwt.client.view.ApplicationView;
 import org.eevolution.ui.gwt.client.view.LoginView;
 
 import com.google.gwt.user.client.ui.Widget;
@@ -33,10 +34,10 @@ import com.mvp4g.client.event.EventBus;
  * @author <a href="mailto:jperezcasanova@gmail.com">Juan Carlos Perez</a>
  * @version $Id: ApplicationEventBus, v 1.0 Feb 16, 2010
  */
-@Events(startView=LoginView.class)
+@Events(startView=ApplicationView.class)
 public interface ApplicationEventBus extends EventBus {
 	
-	@Start
+//	@Start
 	@Event(handlers=LoginPresenter.class)
 	public void login();
 
@@ -55,6 +56,7 @@ public interface ApplicationEventBus extends EventBus {
 	@Event(handlers=ApplicationPresenter.class)
 	public void setWest(Widget w);
 
+	@Start
 	@Event(handlers={TopBarPresenter.class, TreeMenuPresenter.class, ContentPresenter.class})
 	public void initialize();
 	

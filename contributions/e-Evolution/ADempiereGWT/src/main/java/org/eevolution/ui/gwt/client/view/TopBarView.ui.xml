@@ -1,14 +1,50 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:image field='logo' src='../resources/logo.jpg' />
+
 	<ui:style>
-		/* Add CSS here. See the GWT docs on UI Binder for more details */
+		.statusDiv {
+			text-align: right;
+			margin: 1em;
+		}
+		
+		.linksDiv {
+			text-align: right;
+		}
+		
+		@if user.agent ie6 {
+			.logo {
+				background-image: url(logo.jpg);
+				width: 140px;
+				height: 75px;
+				position: absolute;
+			}
+		}
+		
+		@else {
+			@sprite .logo {
+				gwt-image: 'logo';
+				position: absolute;
+			}
+		}
 	</ui:style>
+
 	<g:HTMLPanel>
-		<!--
-			Add GWT widgets here. Enter < and hit Ctrl-Space to auto-complete
-			widget names. The ui:field attribute binds an element to a field in
-			the owner class. See the GWT docs on UI Binder for more details.
-		-->
+		<div class='{style.logo}' />
+
+		<div class="{style.statusDiv}">
+			<div>
+				<b>SuperUser@System.*</b>
+			</div>
+
+			<div class='{style.linksDiv}'>
+				<g:Anchor href='javascript:;' ui:field='preferenceLink'>Preference</g:Anchor>
+				 &nbsp;| &nbsp;
+				<g:Anchor href='javascript:;' ui:field='SystemLink'>System Administrator</g:Anchor>
+				 &nbsp;| &nbsp;
+				<g:Anchor href='javascript:;' ui:field='logoutLink'>Logout</g:Anchor>
+			</div>
+		</div>
 	</g:HTMLPanel>
 </ui:UiBinder> 

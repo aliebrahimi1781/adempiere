@@ -15,6 +15,7 @@
  *****************************************************************************/
 package org.eevolution.ui.gwt.client;
 
+import org.eevolution.ui.gwt.client.view.ApplicationView;
 import org.eevolution.ui.gwt.client.view.LoginView;
 
 import com.google.gwt.core.client.EntryPoint;
@@ -37,9 +38,12 @@ public class ADempiereGWT implements EntryPoint {
 
 		Mvp4gModule module = (Mvp4gModule) GWT.create(Mvp4gModule.class);
 		module.createAndStartModule();
-		LoginView loginView = (LoginView)module.getStartView();
-		loginView.center();
-		RootLayoutPanel.get().add(loginView );
+//		LoginView loginView = (LoginView)module.getStartView();
+//		loginView.center();
+//		loginView.show();
+		
+		ApplicationView appView = (ApplicationView)module.getStartView();
+		RootLayoutPanel.get().add(appView);
 		
 	}
 

@@ -19,7 +19,10 @@ import org.eevolution.ui.gwt.client.presenter.ApplicationPresenter.IApplicationV
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;
+import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.LayoutPanel;
+import com.google.gwt.user.client.ui.SimplePanel;
 import com.google.gwt.user.client.ui.Widget;
 
 /**
@@ -34,6 +37,10 @@ public class ApplicationView extends Composite implements IApplicationView {
 
 	interface ApplicationViewUiBinder extends UiBinder<Widget, ApplicationView> {
 	}
+	
+	@UiField SimplePanel topPanel;
+	@UiField LayoutPanel treeMenu;
+	@UiField LayoutPanel contentPanel;
 
 	public ApplicationView() {
 		initWidget(uiBinder.createAndBindUi(this));
@@ -41,20 +48,20 @@ public class ApplicationView extends Composite implements IApplicationView {
 
 	@Override
 	public void setContent(Widget widget) {
-		// TODO Auto-generated method stub
-		
+		contentPanel.clear();
+		contentPanel.add(widget);
 	}
 
 	@Override
 	public void setTopBar(Widget widget) {
-		// TODO Auto-generated method stub
-		
+		topPanel.clear();
+		topPanel.add(widget);
 	}
 
 	@Override
 	public void setTreeMenu(Widget widget) {
-		// TODO Auto-generated method stub
-		
+		treeMenu.clear();
+		treeMenu.add(widget);
 	}
 
 }

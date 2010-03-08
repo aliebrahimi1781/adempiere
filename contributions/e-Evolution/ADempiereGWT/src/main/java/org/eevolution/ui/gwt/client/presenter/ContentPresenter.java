@@ -40,7 +40,7 @@ public class ContentPresenter extends BasePresenter<ContentPresenter.IContentVie
 	}
 	
 	public void onInitialize(){
-		// TODO Auto-generated method stub
+		eventBus.setCenter(view.getViewWidget());
 	}
 	
 	public void onLoadWindow(){
