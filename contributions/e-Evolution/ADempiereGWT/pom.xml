@@ -50,7 +50,7 @@
 					<target>1.6</target>
 				</configuration>
 			</plugin>
-			<plugin>
+			<!--lugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>gwt-maven-plugin</artifactId>
 				<version>1.2</version>
@@ -64,7 +64,7 @@
 				<configuration>
 					<runTarget>org.eevolution.ui.gwt.client/index.html</runTarget>
 				</configuration>
-			</plugin>
+			</plugin-->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
@@ -83,6 +83,11 @@
 			<name>Snapshots Repository for Mvp4g</name>
 			<url>http://mvp4g.googlecode.com/svn/maven2/snapshots/</url>
 		</repository>
+        <repository>
+             <id>pl.balon.gwt gwt-diagrams</id>
+             <name>Repository for gwt-diagrams</name>
+             <url>http://repository.jboss.org/maven2/</url>
+        </repository>
 	</repositories>
 
 	<properties>
@@ -122,6 +127,11 @@
 			<artifactId>javax.servlet</artifactId>
 			<version>1.0.0</version>
 		</dependency>
+        <dependency>
+            <groupId>pl.balon.gwt</groupId>
+            <artifactId>gwt-diagrams</artifactId>
+            <version>0.2-RC00</version>
+        </dependency>
 	</dependencies>
 
 	<scm>
