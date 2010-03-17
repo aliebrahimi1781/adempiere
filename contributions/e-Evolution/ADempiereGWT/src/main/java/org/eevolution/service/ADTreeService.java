@@ -1,0 +1,40 @@
+package org.eevolution.service;
+
+import java.util.List;
+
+import org.eevolution.dao.GenericDAOWithJPA;
+import org.eevolution.domain.ADTree;
+
+import org.springframework.security.access.prepost.PostFilter;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.transaction.annotation.Transactional;
+
+/**
+ * This is a service layer interface (actually more of a simple facade). Note
+ * that most of these methods are implemented by {@link GenericDAOWithJPA}.
+ */
+@PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')")
+public interface ADTreeService {
+
+	//TODO:this does not work
+	//@PostFilter("filterObject.owners.email == principal.username or hasRole('ROLE_ADMIN')")
+	List<ADTree> findAll();
+	
+	@PreAuthorize("hasRole('ROLE_ADMIN')")
+	@Transactional
+	List<ADTree> findByName(String name);
+
+	@PreAuthorize("hasRole('ROLE_ADMIN')")
+	@Transactional
+	void persist(ADTree entity);
+
+	@PreAuthorize("hasRole('ROLE_ADMIN')")
+	@Transactional
+	void merge(ADTree entity);
+
+	@PreAuthorize("hasRole('ROLE_ADMIN')")
+	@Transactional
+	void remove(ADTree entity);
+
+	ADTree find(Long id);
+}
