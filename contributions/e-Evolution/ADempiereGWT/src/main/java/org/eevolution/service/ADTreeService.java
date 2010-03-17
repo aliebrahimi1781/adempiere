@@ -9,12 +9,18 @@ import org.springframework.security.access.prepost.PostFilter;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.google.gwt.user.client.rpc.RemoteService;
+import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
+
+
 /**
  * This is a service layer interface (actually more of a simple facade). Note
  * that most of these methods are implemented by {@link GenericDAOWithJPA}.
- */
+ * The client side stub for the RPC service.
+*/
+@RemoteServiceRelativePath("springGwtServices/ADTreeService")
 @PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')")
-public interface ADTreeService {
+public interface ADTreeService extends RemoteService{
 
 	//TODO:this does not work
 	//@PostFilter("filterObject.owners.email == principal.username or hasRole('ROLE_ADMIN')")

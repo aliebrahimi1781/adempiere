@@ -65,7 +65,25 @@
     <servlet-mapping>
         <servlet-name>default</servlet-name>
         <url-pattern>/static/*</url-pattern>
-    </servlet-mapping>  
+    </servlet-mapping> 
+    
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>
+        /WEB-INF/applicationContext.xml
+        </param-value>
+    </context-param>
+    
+    <!-- SpringGwt remote service servlet -->
+    <servlet>
+        <servlet-name>springGwtRemoteServiceServlet</servlet-name>
+        <servlet-class>org.spring4gwt.server.SpringGwtRemoteServiceServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>springGwtRemoteServiceServlet</servlet-name>
+        <url-pattern>/springGwtServices/*</url-pattern>
+    </servlet-mapping> 
 
     <!-- required to enable Spring 3.0 REST support -->
     <filter>
