@@ -7,5 +7,5 @@
  <bean id="myAspect" class="org.eevolution.service.Introductions">
 </bean>
  
- <bean id="greetingService" class="org.eevolution.service.impl.ADTreeServiceImpl"/>
+ <bean id="ADTreeService" class="org.eevolution.service.impl.ADTreeServiceImpl"/>
 </beans>
