@@ -4,8 +4,8 @@
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
- <bean id="myAspect" class="com.gs.spring4.gwt.ex.client.annotations.Introductions">
+ <bean id="myAspect" class="org.eevolution.service.Introductions">
 </bean>
  
- <bean id="greetingService" class="com.gs.spring4.gwt.ex.server.GreetingServiceImpl"/>
+ <bean id="greetingService" class="org.eevolution.service.impl.ADTreeServiceImpl"/>
 </beans>
