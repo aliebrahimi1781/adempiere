@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 	<name>ADempiereGWT</name>
-	<comment>ADempiereGWT project</comment>
+	<comment>ADempiere GWT client ui</comment>
 	<projects>
 	</projects>
 	<buildSpec>
@@ -17,11 +17,6 @@
 		</buildCommand>
 		<buildCommand>
 			<name>com.google.gdt.eclipse.core.webAppProjectValidator</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
-		<buildCommand>
-			<name>com.google.gwt.eclipse.core.gwtProjectValidator</name>
 			<arguments>
 			</arguments>
 		</buildCommand>
@@ -42,7 +37,6 @@
 		<nature>org.maven.ide.eclipse.maven2Nature</nature>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>com.google.gdt.eclipse.core.webAppNature</nature>
-		<nature>com.google.gwt.eclipse.core.gwtNature</nature>
 		<nature>org.eclipse.wst.common.project.facet.core.nature</nature>
 		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
 		<nature>org.datanucleus.ide.eclipse.projectnature</nature>
