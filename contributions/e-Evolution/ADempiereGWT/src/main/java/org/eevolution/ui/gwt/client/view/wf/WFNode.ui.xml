@@ -15,7 +15,7 @@
 		}
 	</ui:style>
 	<g:DecoratorPanel>
-		<g:HorizontalPanel ui:field='m_bounds'>
+		<g:HorizontalPanel ui:field='panel'>
 			<g:cell width = '20%'>
 				<g:Image ui:field='icon' url = 'wf.jpg'/>
 			</g:cell>
