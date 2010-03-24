@@ -5,36 +5,16 @@
 	<groupId>org.eevolution.ui</groupId>
 	<artifactId>ADempiereGWT</artifactId>
 	<packaging>war</packaging>
-	<version>1.0.0-beta</version>
-	<name>ADempiereGWT</name>
+	<version>0.5</version>
+	<name>1.0.0-beta</name>
 
-	<description>ADempiere GWT client ui</description>
+	<description>ADempiere GWT Application</description>
 	<organization>
-		<name>e-Evolution</name>
-		<url>http://e-evolution.com/</url>
+		<name>e-evolution.com</name>
+		<url>http://www.e-evolution.com/</url>
 	</organization>
-	<developers>
-		<developer>
-			<name>Victor Perez Juarez</name>
-			<email>victor.perez@e-evolution.com</email>
-			<organization>e-evolution.org</organization>
-			<organizationUrl>http://www.e-evolution.com/</organizationUrl>
-			<roles>
-				<role>Master Developer / Adempiere Architect</role>
-			</roles>
-		</developer>
-		<developer>
-			<name>Juan Carlos Perez</name>
-			<email>jperezcasanova@gmail.com</email>
-			<organization>e-evolution.org</organization>
-			<organizationUrl>http://www.e-evolution.com/</organizationUrl>
-			<roles>
-				<role>Software Engineer</role>
-			</roles>
-		</developer>
-	</developers>
 	<inceptionYear>2010</inceptionYear>
-	<url>http://code.google.com/p/adempiere/</url>
+	<url>http://code.google.com/p/adempiere</url>
 
 	<licenses>
 		<license>
@@ -46,8 +26,29 @@
 
 	<issueManagement>
 		<system>google code</system>
-		<url>http://code.google.com/p/spring-finance-manager/issues/list</url>
+		<url>http://code.google.com/p/adempiere/issues/list</url>
 	</issueManagement>
+
+	<developers>
+		  <developer>
+            <name>Victor Perez Juarez</name>
+            <email>victor.perez@e-evolution.com</email>
+            <organization>e-evolution.org</organization>
+            <organizationUrl>http://www.e-evolution.com/</organizationUrl>
+            <roles>
+                <role>Master Developer / Adempiere Architect</role>
+            </roles>
+        </developer>
+        <developer>
+            <name>Juan Carlos Perez</name>
+            <email>jperezcasanova@gmail.com</email>
+            <organization>e-evolution.org</organization>
+            <organizationUrl>http://www.e-evolution.com/</organizationUrl>
+            <roles>
+                <role>Software Engineer</role>
+            </roles>
+        </developer>
+	</developers>
 
 	<repositories>
 		<repository>
@@ -70,16 +71,16 @@
 			<name>SpringSource Enterprise Bundle Repository - External Bundle Milestones II</name>
 			<url>http://repository.springsource.com/maven/bundles/milestone</url>
 		</repository>
-		<repository>
-			<id>mvp4g.googlecode.snapshots</id>
-			<name>Snapshots Repository for Mvp4g</name>
-			<url>http://mvp4g.googlecode.com/svn/maven2/releases</url>
-		</repository>
-		<repository>
-			<id>pl.balon.gwt gwt-diagrams</id>
-			<name>Repository for gwt-diagrams</name>
-			<url>http://repository.jboss.org/maven2/</url>
-		</repository>
+        <repository>
+            <id>mvp4g.googlecode.snapshots</id>
+            <name>Snapshots Repository for Mvp4g</name>
+            <url>http://mvp4g.googlecode.com/svn/maven2/releases</url>
+        </repository>
+        <repository>
+            <id>pl.balon.gwt gwt-diagrams</id>
+            <name>Repository for gwt-diagrams</name>
+            <url>http://repository.jboss.org/maven2/</url>
+        </repository>
 	</repositories>
 
 	<dependencies>
@@ -295,55 +296,58 @@
 			<artifactId>com.springsource.org.codehaus.jackson</artifactId>
 			<version>1.0.0</version>
 		</dependency>
-		<dependency>
-			<groupId>com.google.gwt</groupId>
-			<artifactId>gwt-user</artifactId>
-			<version>${gwt.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.google.gwt</groupId>
-			<artifactId>gwt-servlet</artifactId>
-			<version>${gwt.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.google.code.gwt-log</groupId>
-			<artifactId>gwt-log</artifactId>
-			<version>2.6.2</version>
-		</dependency>
-		<dependency>
-			<groupId>com.googlecode.mvp4g</groupId>
-			<artifactId>mvp4g</artifactId>
-			<version>${mvp4g.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>pl.balon.gwt</groupId>
-			<artifactId>gwt-diagrams</artifactId>
-			<version>0.2-RC00</version>
-		</dependency>
-		<dependency>
-			<groupId>com.google.code.gwt-dnd</groupId>
-			<artifactId>gwt-dragdrop</artifactId>
-			<version>1.2.6</version>
-		</dependency>
-		<dependency>
-			<groupId>postgresql</groupId>
-			<artifactId>postgresql</artifactId>
-			<version>8.4-701.jdbc4</version>
-		</dependency>
+    <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-user</artifactId>
+            <version>${gwt.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-servlet</artifactId>
+            <version>${gwt.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gwt-log</groupId>
+            <artifactId>gwt-log</artifactId>
+            <version>2.6.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.googlecode.mvp4g</groupId>
+            <artifactId>mvp4g</artifactId>
+            <version>${mvp4g.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>pl.balon.gwt</groupId>
+            <artifactId>gwt-diagrams</artifactId>
+            <version>0.2-RC00</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gwt-dnd</groupId>
+            <artifactId>gwt-dragdrop</artifactId>
+            <version>1.2.6</version>
+        </dependency>
+        <dependency>
+            <groupId>postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>8.4-701.jdbc4</version>
+        </dependency>
 	</dependencies>
 
 	<build>
-		<outputDirectory>war/WEB-INF/classes</outputDirectory>
+    <outputDirectory>war/WEB-INF/classes</outputDirectory>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.0.2</version>
-				<configuration>
-					<warSourceDirectory>war</warSourceDirectory>
-					<webXml>src/main/webapp/WEB-INF/web.xml</webXml>
-				</configuration>
+				<!--
+					<configuration> <webXml>target/web.xml</webXml> </configuration>
+				-->
 			</plugin>
+			<!--
+				tell the compiler we can use 1.5; we only need this for
+				eclipse:eclipse compatibility
+			-->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -410,42 +414,47 @@
 					<wtpversion>2.0</wtpversion>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>gwt-maven-plugin</artifactId>
-				<version>1.2</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>compile</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<runTarget>org.eevolution.ui.gwt/index.html</runTarget>
-				</configuration>
-			</plugin>
-			<plugin>
-				<artifactId>maven-antrun-plugin</artifactId>
-				<executions>
-					<execution>
-						<phase>validate</phase>
-						<goals>
-							<goal>run</goal>
-						</goals>
-						<configuration>
-							<tasks>
-								<mkdir dir="./war/WEB-INF" />
-								<copy overwrite="true" todir="./war/WEB-INF/">
-									<fileset dir="./src/main/webapp/WEB-INF">
-										<include name="web.xml" />
-									</fileset>
-								</copy>
-							</tasks>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
+                <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>gwt-maven-plugin</artifactId>
+                <version>1.2</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <runTarget>org.eevolution.ui.gwt/index.html</runTarget>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <tasks>
+                                <mkdir dir="./war/WEB-INF" />
+                                <copy overwrite="true" todir="./war/WEB-INF/">
+                                    <fileset dir="./src/main/webapp/WEB-INF">
+                                        <include name="web.xml" />
+                                    </fileset>
+                                </copy>
+                                 <copy overwrite="true" todir="./war/WEB-INF/">
+                                    <fileset dir="./src/test/resource/">
+                                        <include name="ADManager-test.xml" />
+                                    </fileset>
+                                </copy>
+                            </tasks>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
 		</plugins>
 	</build>
 	<properties>
@@ -453,7 +462,7 @@
 		<webflow.version>2.0.8.RELEASE</webflow.version>
 		<aspectj.version>1.6.8.RELEASE</aspectj.version>
 		<spring.security.version>3.0.2.RELEASE</spring.security.version>
-		<gwt.version>2.0.3</gwt.version>
-		<mvp4g.version>1.1.0</mvp4g.version>
+        <gwt.version>2.0.3</gwt.version>
+        <mvp4g.version>1.1.0</mvp4g.version>
 	</properties>
 </project>
