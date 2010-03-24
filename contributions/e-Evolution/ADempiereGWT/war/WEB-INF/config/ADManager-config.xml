@@ -12,5 +12,8 @@
         <import resource="ADManager-infrastructure.xml" />      
         <import resource="ADManager-webflow.xml" />
         <import resource="ADManager-security.xml" />
+        
+        <bean id="myAspect" class="org.eevolution.service.Introductions"/>
+        <bean id="ADTreeService" class="org.eevolution.service.impl.ADTreeServiceImpl"/>
 
 </beans>

@@ -23,19 +23,19 @@
 	</context-param>
 
 
-	<filter>
+	<!--filter>
 		<filter-name>springSecurityFilterChain</filter-name>
 		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
-	</filter>
+	</filter-->
 
 	<!-- Comment out if using JBoss -->
-	<listener>
+	<!--listener>
 		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
 	</listener>
 
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-	</listener>
+	</listener-->
 
 	<!--
 		Serves static resource content from .jar files such as spring-js.jar
@@ -45,7 +45,7 @@
 		<servlet-class>org.springframework.js.resource.ResourceServlet</servlet-class>
 	</servlet>
 
-	<servlet>
+	<!--servlet>
 		<servlet-name>ADManager</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<init-param>
@@ -53,12 +53,12 @@
 			<param-value />
 		</init-param>
 		<load-on-startup>1</load-on-startup>
-	</servlet>
+	</servlet-->
 
-	<servlet-mapping>
+	<!--servlet-mapping>
 		<servlet-name>ADManager</servlet-name>
 		<url-pattern>/</url-pattern>
-	</servlet-mapping>
+	</servlet-mapping-->
 
 	<!--
 		Map all /resources requests to the Resource Servlet for handling
@@ -73,12 +73,6 @@
 		<url-pattern>/static/*</url-pattern>
 	</servlet-mapping>
 
-	<context-param>
-		<param-name>contextConfigLocation</param-name>
-		<param-value>
-        /WEB-INF/applicationContext.xml
-        </param-value>
-	</context-param>
 
 	<!-- SpringGwt remote service servlet -->
 	<servlet>
@@ -102,45 +96,45 @@
 	</servlet-mapping>
 
 	<!-- required to enable Spring 3.0 REST support -->
-	<filter>
+	<!--filter>
 		<filter-name>httpMethodFilter</filter-name>
 		<filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
-	</filter>
+	</filter-->
 
 
-	<filter-mapping>
+	<!--filter-mapping>
 		<filter-name>springSecurityFilterChain</filter-name>
 		<url-pattern>/*</url-pattern>
-	</filter-mapping>
+	</filter-mapping-->
 
 
-	<filter-mapping>
+	<!--filter-mapping>
 		<filter-name>httpMethodFilter</filter-name>
-		<servlet-name>FinanceManager</servlet-name>
-	</filter-mapping>
+		<servlet-name>ADempiereGWT</servlet-name>
+	</filter-mapping-->
 
-	<filter>
+	<!--filter>
 		<filter-name>Spring OpenEntityManagerInViewFilter</filter-name>
 		<filter-class>org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter</filter-class>
-	</filter>
+	</filter-->
 
-	<filter-mapping>
+	<!--filter-mapping>
 		<filter-name>Spring OpenEntityManagerInViewFilter</filter-name>
 		<url-pattern>/*</url-pattern>
-	</filter-mapping>
+	</filter-mapping-->
 
 	<session-config>
 		<session-timeout>10</session-timeout>
 	</session-config>
 
-	<welcome-file-list>
-		<welcome-file>index.jsp</welcome-file>
-	</welcome-file-list>
+    <!--welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list-->
 
-	<error-page>
-		<exception-type>java.lang.Exception</exception-type>
-		<location>/WEB-INF/jsp/uncaughtException.jsp</location>
-	</error-page>
+    <!--error-page>
+        <exception-type>java.lang.Exception</exception-type>
+        <location>/WEB-INF/jsp/uncaughtException.jsp</location>
+    </error-page-->
 
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
