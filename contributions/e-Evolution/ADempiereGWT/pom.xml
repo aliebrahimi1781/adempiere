@@ -73,7 +73,7 @@
 		<repository>
 			<id>mvp4g.googlecode.snapshots</id>
 			<name>Snapshots Repository for Mvp4g</name>
-			<url>http://mvp4g.googlecode.com/svn/maven2/snapshots/</url>
+			<url>http://mvp4g.googlecode.com/svn/maven2/releases</url>
 		</repository>
 		<repository>
 			<id>pl.balon.gwt gwt-diagrams</id>
@@ -333,6 +333,7 @@
 	</dependencies>
 
 	<build>
+		<outputDirectory>war/WEB-INF/classes</outputDirectory>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -340,6 +341,7 @@
 				<version>2.0.2</version>
 				<configuration>
 					<warSourceDirectory>war</warSourceDirectory>
+					<webXml>src/main/webapp/WEB-INF/web.xml</webXml>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -416,14 +418,33 @@
 					<execution>
 						<goals>
 							<goal>compile</goal>
-							<!--goal>generateAsync</goal-->
-							<!--goal>test</goal-->
 						</goals>
 					</execution>
 				</executions>
 				<configuration>
-					<runTarget>org.eevolution.ui.gwt.client/index.html</runTarget>
+					<runTarget>org.eevolution.ui.gwt/index.html</runTarget>
 				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>validate</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<mkdir dir="./war/WEB-INF" />
+								<copy overwrite="true" todir="./war/WEB-INF/">
+									<fileset dir="./src/main/webapp/WEB-INF">
+										<include name="web.xml" />
+									</fileset>
+								</copy>
+							</tasks>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
@@ -432,7 +453,7 @@
 		<webflow.version>2.0.8.RELEASE</webflow.version>
 		<aspectj.version>1.6.8.RELEASE</aspectj.version>
 		<spring.security.version>3.0.2.RELEASE</spring.security.version>
-		<gwt.version>2.0.2</gwt.version>
-		<mvp4g.version>1.1.0-SNAPSHOT</mvp4g.version>
+		<gwt.version>2.0.3</gwt.version>
+		<mvp4g.version>1.1.0</mvp4g.version>
 	</properties>
 </project>
