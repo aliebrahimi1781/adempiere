@@ -1,0 +1,70 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:ad="urn:import:org.eevolution.ui.gwt.client.widget"
+	xmlns:adc="urn:import:org.eevolution.ui.gwt.client.component">
+		<ui:style>
+		.FindView{
+			padding: 10px;
+		}
+		.leftPanel{
+			text-align: left;
+			position: absolute;
+		}
+		.rigthPanel{
+			text-align: right;
+		}
+	</ui:style>
+
+	<g:VerticalPanel height='500px' width='800px'>
+		<g:cell height = '10%' width='100%'>
+			<g:VerticalPanel height='100%' width='100%'>
+				<g:cell height ='50%' width='100%'> 
+					<g:HorizontalPanel height='100%' width='100%'>
+						<g:cell width='25%'>
+							<ad:Label ui:field='labelValue'/>
+						</g:cell>
+						<g:cell width='25%'>
+							<ad:TextBox ui:field='fieldValue'/>
+						</g:cell>
+						<g:cell width='25%'>
+							<ad:Label ui:field='lBPartner_ID'/>
+						</g:cell>
+						<g:cell width='25%'>
+							<ad:TextBox ui:field='fBPartner_ID'/>
+						</g:cell>
+					</g:HorizontalPanel>
+				</g:cell>
+				<g:cell height ='50%' width='100%'> 
+					<g:HorizontalPanel height='100%' width='100%'>
+						<g:cell width='25%'>
+							<ad:Label ui:field='labelName'/>
+						</g:cell>
+						<g:cell width='25%'>
+							<ad:TextBox ui:field='fieldName'/>
+						</g:cell>
+						<g:cell width='25%'>
+							<ad:Label ui:field='lProduct_ID'/>
+						</g:cell>
+						<g:cell width='25%'>
+							<ad:TextBox ui:field='fProduct_ID'/>
+						</g:cell>
+					</g:HorizontalPanel>
+				</g:cell>
+			</g:VerticalPanel>
+		</g:cell>
+		<g:cell width = '100%' height ='70%'>
+			<g:VerticalPanel height='100%' width = '100%'>
+				<!-- Table Should Be Here! -->
+			</g:VerticalPanel>
+		</g:cell>
+		<g:cell height ='10%' width='100%'>
+			<adc:ConfirmPanel ui:field='confirmPanel'
+							withCancelButton='true' withHelpButton='true' withRefreshButton='true'
+							withResetButton='false' withCustomizeButton='false'
+							withHistoryButton='false' withZoomButton='true'/>
+		</g:cell>
+		<g:cell height='10%' width='100%'>
+			<adc:StatusBarPanel ui:field='statusBar'/>
+		</g:cell>
+	</g:VerticalPanel>
+</ui:UiBinder> 
