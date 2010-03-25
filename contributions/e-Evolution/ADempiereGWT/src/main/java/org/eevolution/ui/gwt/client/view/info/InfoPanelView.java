@@ -19,7 +19,7 @@ import com.google.gwt.event.dom.client.ClickHandler;
  * 
  * ADempiere GWT InfoPanelView
  * @author <a href="mailto:alberto.juarez@e-evolution.com">Alberto Juarez Cabalero, www.e-evolution.com</a>
- * @version $Id: InfoPanelView.java, v 1.0 Mar 19, 2010
+ * @version $Id: InfoPanelView.java, v 1.0 Mar 21, 2010
  */
 public abstract class InfoPanelView extends Dialog implements ClickHandler {
 
