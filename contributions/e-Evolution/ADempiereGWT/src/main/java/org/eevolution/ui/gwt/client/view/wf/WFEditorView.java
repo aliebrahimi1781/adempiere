@@ -1,7 +1,7 @@
 package org.eevolution.ui.gwt.client.view.wf;
 
 import org.eevolution.ui.gwt.client.component.ConfirmPanel;
-import org.eevolution.ui.gwt.client.view.wf.WFEditorPresenter.IWFEditorView;
+import org.eevolution.ui.gwt.client.view.interfaces.IWFEditorView;
 import org.eevolution.ui.gwt.client.widget.Dialog;
 import org.eevolution.ui.gwt.client.widget.ListBox;
 import com.google.gwt.core.client.GWT;

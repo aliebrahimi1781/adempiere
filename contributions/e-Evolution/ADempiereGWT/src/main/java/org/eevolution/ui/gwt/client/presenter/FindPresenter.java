@@ -4,6 +4,7 @@
 package org.eevolution.ui.gwt.client.presenter;
 
 import org.eevolution.ui.gwt.client.ADempiereEventBus;
+import org.eevolution.ui.gwt.client.view.interfaces.IFindView;
 
 import com.mvp4g.client.presenter.BasePresenter;
 
@@ -13,15 +14,8 @@ import com.mvp4g.client.presenter.BasePresenter;
  * @version $Id: FindPresenter.java, v 1.0 Feb 24, 2010
  */
 
-public class FindPresenter extends BasePresenter<FindPresenter.IFindView, ADempiereEventBus> {
-	public interface IFindView{
-
-		 public void cmd_save(boolean saveQuery);
-		 public void refreshUserQueries();
-		 public void cmd_ok_Simple();
-		 public void cmd_ok_Advanced();
-		 public void cmd_save();		 
-	}
+public class FindPresenter extends BasePresenter<IFindView, ADempiereEventBus> {
+	
 
 	 public void onCmd_save(boolean saveQuery){
 		 

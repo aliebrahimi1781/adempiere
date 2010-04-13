@@ -2,6 +2,7 @@
 package org.eevolution.ui.gwt.client.presenter;
 
 import org.eevolution.ui.gwt.client.ADempiereEventBus;
+import org.eevolution.ui.gwt.client.view.interfaces.IEMailDialogView;
 
 import com.google.gwt.user.client.ui.Widget;
 import com.mvp4g.client.presenter.BasePresenter;
@@ -12,11 +13,8 @@ import com.mvp4g.client.presenter.BasePresenter;
  * @version $Id: EMailDialogView.java, v 1.0 Feb 25, 2010
  */
 
-public class EMailDialogPresenter extends BasePresenter<EMailDialogPresenter.IEMailDialogView,ADempiereEventBus>{
-	public interface IEMailDialogView{
-		public void cmd_Ok();
-		public Widget getWitget();
-	}
+public class EMailDialogPresenter extends BasePresenter<IEMailDialogView,ADempiereEventBus>{
+	
 
 	public void onCmd_Ok(){
 		

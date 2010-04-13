@@ -5,6 +5,7 @@ package org.eevolution.ui.gwt.client.presenter;
 
 import org.eevolution.ui.gwt.client.ADempiereEventBus;
 import org.eevolution.ui.gwt.client.view.ProcessDialogView;
+import org.eevolution.ui.gwt.client.view.interfaces.IProcessDialogView;
 
 import com.google.gwt.user.client.ui.Widget;
 import com.mvp4g.client.annotation.Presenter;
@@ -17,20 +18,8 @@ import com.mvp4g.client.presenter.BasePresenter;
  */
 
 @Presenter(view=ProcessDialogView.class)
-public class ProcessDialogPresenter extends BasePresenter<ProcessDialogPresenter.IProcessDialogView,ADempiereEventBus> {
-	public interface IProcessDialogView{
-		
-		public boolean init();
-		public boolean lockUI();
-		public boolean unlockUI();
-		public void startProcess();
-		public void updateUI();
-		public void afterProcess();
-		public void printShipments();
-		public void printInvoices();
-		public Widget getViewWidget();
-		
-	}
+public class ProcessDialogPresenter extends BasePresenter<IProcessDialogView,ADempiereEventBus> {
+	
 	
 	public void onInit()
 	{
