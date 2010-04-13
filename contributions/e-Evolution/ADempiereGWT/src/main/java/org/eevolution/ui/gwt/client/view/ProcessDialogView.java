@@ -2,7 +2,8 @@
 
 package org.eevolution.ui.gwt.client.view;
 
-import org.eevolution.ui.gwt.client.presenter.ProcessDialogPresenter.IProcessDialogView;
+
+import org.eevolution.ui.gwt.client.view.interfaces.IProcessDialogView;
 import org.eevolution.ui.gwt.client.widget.Dialog;
 import org.eevolution.ui.gwt.client.widget.Label;
 

@@ -3,7 +3,8 @@
 package org.eevolution.ui.gwt.client.view;
 
 import java.util.Vector;
-import org.eevolution.ui.gwt.client.presenter.FindPresenter.IFindView;
+
+import org.eevolution.ui.gwt.client.view.interfaces.IFindView;
 import org.eevolution.ui.gwt.client.widget.Button;
 import org.eevolution.ui.gwt.client.widget.ComboBox;
 import org.eevolution.ui.gwt.client.widget.Dialog;

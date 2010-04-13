@@ -3,7 +3,8 @@ package org.eevolution.ui.gwt.client.view;
 
 import org.eevolution.ui.gwt.client.component.ConfirmPanel;
 import org.eevolution.ui.gwt.client.component.StatusBarPanel;
-import org.eevolution.ui.gwt.client.presenter.EMailDialogPresenter.IEMailDialogView;
+
+import org.eevolution.ui.gwt.client.view.interfaces.IEMailDialogView;
 import org.eevolution.ui.gwt.client.widget.Dialog;
 import org.eevolution.ui.gwt.client.widget.Label;
 import org.eevolution.ui.gwt.client.widget.TextBox;

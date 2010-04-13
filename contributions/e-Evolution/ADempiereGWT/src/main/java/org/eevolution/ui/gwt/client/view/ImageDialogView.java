@@ -3,7 +3,7 @@
 package org.eevolution.ui.gwt.client.view;
 
 import org.eevolution.ui.gwt.client.component.ConfirmPanel;
-import org.eevolution.ui.gwt.client.presenter.ImageDialogPresenter.IImageDialogView;
+import org.eevolution.ui.gwt.client.view.interfaces.IImageDialogView;
 import org.eevolution.ui.gwt.client.widget.Dialog;
 import org.eevolution.ui.gwt.client.widget.Label;
 
