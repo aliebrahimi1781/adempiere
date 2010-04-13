@@ -1,7 +1,7 @@
 //TODO:Copyright message should go here!
 package org.eevolution.ui.gwt.client.presenter;
 
-import org.eevolution.ui.gwt.client.ApplicationEventBus;
+import org.eevolution.ui.gwt.client.ADempiereEventBus;
 //import org.eevolution.ui.gwt.client.view.PerformanceDetailView;
 import com.mvp4g.client.annotation.Presenter;
 import com.mvp4g.client.presenter.BasePresenter;
@@ -14,7 +14,7 @@ import com.mvp4g.client.presenter.BasePresenter;
  */
 
 //@Presenter(view = PerformanceDetailView.class)
-public class PerformanceDetailPresenter extends BasePresenter<PerformanceDetailPresenter.IPerformanceDetailView,ApplicationEventBus>{
+public class PerformanceDetailPresenter extends BasePresenter<PerformanceDetailPresenter.IPerformanceDetailView,ADempiereEventBus>{
 
 	public interface IPerformanceDetailView{
 		

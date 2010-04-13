@@ -21,12 +21,12 @@ import com.mvp4g.client.event.EventBus;
  * @version $Id: ApplicationEventBus, v 1.0 Feb 16, 2010
  */
 @Events(startView=ApplicationView.class)
-public interface ApplicationEventBus extends EventBus {
+public interface ADempiereEventBus extends EventBus {
 	
-//	@Start
 	@Event(handlers=LoginPresenter.class)
 	public void login();
 
+//	@Start
 	@Event(handlers=LoginPresenter.class)
 	public void authenticate();
 	

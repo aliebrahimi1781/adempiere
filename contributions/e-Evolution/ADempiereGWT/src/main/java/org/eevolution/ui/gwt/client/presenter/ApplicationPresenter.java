@@ -1,8 +1,9 @@
 //TODO:Copyright message should go here!
 package org.eevolution.ui.gwt.client.presenter;
 
-import org.eevolution.ui.gwt.client.ApplicationEventBus;
+import org.eevolution.ui.gwt.client.ADempiereEventBus;
 import org.eevolution.ui.gwt.client.view.ApplicationView;
+import org.eevolution.ui.gwt.client.view.interfaces.IApplicationView;
 
 import com.google.gwt.user.client.ui.Widget;
 import com.mvp4g.client.annotation.Presenter;
@@ -14,17 +15,9 @@ import com.mvp4g.client.presenter.BasePresenter;
  * @version $Id: ApplicationPresenter.java, v 1.0 Feb 16, 2010
  */
 @Presenter(view=ApplicationView.class)
-public class ApplicationPresenter extends BasePresenter<ApplicationPresenter.IApplicationView, ApplicationEventBus> {
+public class ApplicationPresenter extends BasePresenter<IApplicationView, ADempiereEventBus> {
 
-	public interface IApplicationView {
-		
-		public void setTopBar(Widget widget);
-
-		public void setContent(Widget widget);
-		
-		public void setTreeMenu(Widget widget);
-		
-	}
+	
 	
 	public void onSetNorth(Widget w){
 		view.setTopBar(w);

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+  <wb-module deploy-name="ADempiereGWT">
+    <property name="context-root" value="ADempiereGWT"/>
+    <wb-resource deploy-path="/WEB-INF/classes" source-path="src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="src/main/resources"/>
+        <wb-resource deploy-path="/" source-path="/Applications/Development/workspace/adempiere/contributions/e-Evolution/ADempiereGWT/war"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/resource"/>
+    <property name="java-output-path" value="/war/WEB-INF/classes"/>
+  </wb-module>
+</project-modules>

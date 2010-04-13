@@ -3,7 +3,7 @@
 package org.eevolution.ui.gwt.client.presenter;
 
 
-import org.eevolution.ui.gwt.client.ApplicationEventBus;
+import org.eevolution.ui.gwt.client.ADempiereEventBus;
 import org.eevolution.ui.gwt.client.view.ProcessDialogView;
 
 import com.google.gwt.user.client.ui.Widget;
@@ -17,7 +17,7 @@ import com.mvp4g.client.presenter.BasePresenter;
  */
 
 @Presenter(view=ProcessDialogView.class)
-public class ProcessDialogPresenter extends BasePresenter<ProcessDialogPresenter.IProcessDialogView,ApplicationEventBus> {
+public class ProcessDialogPresenter extends BasePresenter<ProcessDialogPresenter.IProcessDialogView,ADempiereEventBus> {
 	public interface IProcessDialogView{
 		
 		public boolean init();

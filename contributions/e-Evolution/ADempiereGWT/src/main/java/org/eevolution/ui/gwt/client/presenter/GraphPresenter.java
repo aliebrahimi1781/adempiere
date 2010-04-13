@@ -3,7 +3,7 @@ package org.eevolution.ui.gwt.client.presenter;
 
 
 
-import org.eevolution.ui.gwt.client.ApplicationEventBus;
+import org.eevolution.ui.gwt.client.ADempiereEventBus;
 //import org.eevolution.ui.gwt.client.view.GraphView;
 import com.google.gwt.user.client.ui.Widget;
 import com.mvp4g.client.annotation.Presenter;
@@ -16,7 +16,7 @@ import com.mvp4g.client.presenter.BasePresenter;
  */
 
 //@Presenter(view=GraphView.class)
-public class GraphPresenter extends BasePresenter<GraphPresenter.IGraphView,ApplicationEventBus> {
+public class GraphPresenter extends BasePresenter<GraphPresenter.IGraphView,ADempiereEventBus> {
 	public interface IGraphView{
 		
 		public void setGoal();

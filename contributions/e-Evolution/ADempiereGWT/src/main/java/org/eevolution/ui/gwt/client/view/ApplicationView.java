@@ -1,7 +1,8 @@
 //TODO:Copyright message should go here!
 package org.eevolution.ui.gwt.client.view;
 
-import org.eevolution.ui.gwt.client.presenter.ApplicationPresenter.IApplicationView;
+
+import org.eevolution.ui.gwt.client.view.interfaces.IApplicationView;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;

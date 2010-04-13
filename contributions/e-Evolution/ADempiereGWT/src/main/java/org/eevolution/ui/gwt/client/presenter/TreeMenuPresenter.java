@@ -1,11 +1,10 @@
 //TODO:Copyright message should go here!
 package org.eevolution.ui.gwt.client.presenter;
 
-import org.eevolution.ui.gwt.client.ApplicationEventBus;
+import org.eevolution.ui.gwt.client.ADempiereEventBus;
 import org.eevolution.ui.gwt.client.view.TreeMenuView;
+import org.eevolution.ui.gwt.client.view.interfaces.ITreeView;
 
-import com.google.gwt.user.client.ui.Widget;
-import com.mvp4g.client.annotation.Event;
 import com.mvp4g.client.annotation.Presenter;
 import com.mvp4g.client.presenter.BasePresenter;
 
@@ -15,20 +14,9 @@ import com.mvp4g.client.presenter.BasePresenter;
  * @version $Id: TreePresenter.java, v 1.0 Feb 16, 2010
  */
 @Presenter(view=TreeMenuView.class)
-public class TreeMenuPresenter extends BasePresenter<TreeMenuPresenter.ITreeView, ApplicationEventBus> {
+public class TreeMenuPresenter extends BasePresenter<ITreeView, ADempiereEventBus> {
 
-	public interface ITreeView{
 
-		public void initialize();
-
-		public void openWindow();
-
-		public void closeWindow();
-
-		public void changeWindow();
-
-		public Widget getViewWidget();
-	}
 
 	public void onInitialize(){
 		eventBus.setWest(view.getViewWidget());

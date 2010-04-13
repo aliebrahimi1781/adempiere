@@ -1,7 +1,7 @@
 //TODO:Copyright message should go here!
 package org.eevolution.ui.gwt.client.presenter;
 
-import org.eevolution.ui.gwt.client.ApplicationEventBus;
+import org.eevolution.ui.gwt.client.ADempiereEventBus;
 import org.eevolution.ui.gwt.client.view.ImageDialogView;
 
 
@@ -17,7 +17,7 @@ import com.mvp4g.client.presenter.BasePresenter;
  * @version $Id: ImageDialogPresenter.java, v 1.0 Feb 23, 2010
  */
 
-public class ImageDialogPresenter extends BasePresenter<ImageDialogPresenter.IImageDialogView,ApplicationEventBus> {
+public class ImageDialogPresenter extends BasePresenter<ImageDialogPresenter.IImageDialogView,ADempiereEventBus> {
 	
 	public interface IImageDialogView{
 		public void getAD_Image_ID();
