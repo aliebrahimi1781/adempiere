@@ -1,10 +1,10 @@
-package org.eevolution.service.impl;
+package org.eevolution.ui.gwt.server;
 
 import java.util.List;
 
 import org.eevolution.dao.GenericDAOWithJPA;
-import org.eevolution.domain.ADTree;
-import  org.eevolution.service.ADTreeService;
+import org.eevolution.ui.gwt.client.ADTreeService;
+import org.eevolution.ui.gwt.client.domain.ADTree;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;

@@ -1,8 +1,10 @@
 package org.eevolution.service;
 
 import static org.junit.Assert.assertEquals;
-import org.eevolution.domain.ADTree;
-import org.eevolution.domain.ADTreeNode;
+
+import org.eevolution.ui.gwt.client.ADTreeService;
+import org.eevolution.ui.gwt.client.domain.ADTree;
+import org.eevolution.ui.gwt.client.domain.ADTreeNode;
 
 import org.junit.After;
 import org.junit.Before;
@@ -95,9 +97,9 @@ public class ADTreeServiceTest {
 			for (ADTreeNode node: tree.getADTreeNode())
 			{
 				System.out.println("-------------------------------------");
-				System.out.println("Tree id:"+ node.getParentId());
+//				System.out.println("Tree id:"+ node.getParentId());
 				System.out.println("Node id"+ node.getId());
-				System.out.println("Node Seq"+ node.getSeqno());
+//				System.out.println("Node Seq"+ node.getSeqno());
 				
 			}
 		}	

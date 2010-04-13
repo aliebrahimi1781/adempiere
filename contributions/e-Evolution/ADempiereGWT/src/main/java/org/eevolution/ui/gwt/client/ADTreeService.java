@@ -1,11 +1,8 @@
-package org.eevolution.service;
+package org.eevolution.ui.gwt.client;
 
 import java.util.List;
 
-import org.eevolution.dao.GenericDAOWithJPA;
-import org.eevolution.domain.ADTree;
-
-import org.springframework.security.access.prepost.PostFilter;
+import org.eevolution.ui.gwt.client.domain.ADTree;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -19,7 +16,7 @@ import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
  * The client side stub for the RPC service.
 */
 @RemoteServiceRelativePath("springGwtServices/ADTreeService")
-@PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')")
+//@PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')")
 public interface ADTreeService extends RemoteService{
 
 	//TODO:this does not work

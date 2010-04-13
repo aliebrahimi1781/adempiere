@@ -1,4 +1,4 @@
-package org.eevolution.domain;
+package org.eevolution.ui.gwt.client.domain;
 
 import java.io.Serializable;
 import javax.persistence.*;

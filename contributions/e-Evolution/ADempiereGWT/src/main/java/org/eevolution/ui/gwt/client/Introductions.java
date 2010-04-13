@@ -1,9 +1,8 @@
-package org.eevolution.service;
+package org.eevolution.ui.gwt.client;
 
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.DeclareParents;
 
-import org.eevolution.service.ADTreeService;
 
 @Aspect
 public class Introductions {
