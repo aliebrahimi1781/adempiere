@@ -2,6 +2,9 @@ package org.eevolution.ui.gwt.client.domain;
 
 import java.io.Serializable;
 import javax.persistence.*;
+
+import net.sf.gilead.pojo.java5.LightEntity;
+
 import java.sql.Timestamp;
 //import java.math.BigDecimal;
 
@@ -12,7 +15,7 @@ import java.sql.Timestamp;
  */
 @Entity
 @Table(name="ad_treenode")
-public class ADTreeNode implements Serializable {
+public class ADTreeNode extends LightEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@EmbeddedId

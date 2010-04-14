@@ -6,6 +6,7 @@ import org.eevolution.dao.GenericDAOWithJPA;
 import org.eevolution.ui.gwt.client.ADTreeService;
 import org.eevolution.ui.gwt.client.domain.ADTree;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +19,7 @@ import org.springframework.stereotype.Service;
  * 
  */
 @Service("ADTreeService")
+@Controller
 @Repository
 public class ADTreeServiceImpl extends GenericDAOWithJPA<ADTree, Long> implements ADTreeService {
 	

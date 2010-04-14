@@ -19,6 +19,8 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
+import net.sf.gilead.pojo.java5.LightEntity;
+
 
 /**
  * The persistent class for the ad_tree database table.
@@ -26,7 +28,7 @@ import javax.validation.constraints.Pattern;
  */
 @Entity
 @Table(name="ad_tree")
-public class ADTree implements Serializable {
+public class ADTree extends LightEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id

@@ -6,8 +6,8 @@ import org.eevolution.ui.gwt.client.domain.ADTree;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.google.gwt.user.client.rpc.RemoteService;
 import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
+import com.google.code.gwt.remoteaction.client.RemoteActionService;
 
 
 /**
@@ -17,7 +17,7 @@ import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 */
 @RemoteServiceRelativePath("springGwtServices/ADTreeService")
 //@PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')")
-public interface ADTreeService extends RemoteService{
+public interface ADTreeService extends RemoteActionService{
 
 	//TODO:this does not work
 	//@PostFilter("filterObject.owners.email == principal.username or hasRole('ROLE_ADMIN')")

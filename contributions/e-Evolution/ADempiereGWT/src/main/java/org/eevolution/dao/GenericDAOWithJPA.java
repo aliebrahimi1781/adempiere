@@ -6,6 +6,7 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import net.sf.gilead.gwt.PersistentRemoteService;
 
 /**
  * This class provides a generic default implementation for many functionalities
@@ -18,7 +19,7 @@ import javax.persistence.PersistenceContext;
  * @param <ID>
  *            the identifier type
  */
-public abstract class GenericDAOWithJPA<T, ID extends Serializable> {
+public abstract class GenericDAOWithJPA<T, ID extends Serializable> extends PersistentRemoteService {
 
 	private Class<T> persistentClass;
 

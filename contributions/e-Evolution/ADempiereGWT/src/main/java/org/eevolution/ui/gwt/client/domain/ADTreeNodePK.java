@@ -3,12 +3,14 @@ package org.eevolution.ui.gwt.client.domain;
 import java.io.Serializable;
 import javax.persistence.*;
 
+import net.sf.gilead.pojo.java5.LightEntity;
+
 /**
  * The primary key class for the ad_treenode database table.
  * 
  */
 @Embeddable
-public class ADTreeNodePK implements Serializable {
+public class ADTreeNodePK extends LightEntity implements Serializable {
 	//default serial version id, required for serializable classes.
 	private static final long serialVersionUID = 1L;
 
