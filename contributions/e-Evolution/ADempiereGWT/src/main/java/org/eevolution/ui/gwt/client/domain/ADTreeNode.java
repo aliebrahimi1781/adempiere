@@ -3,7 +3,7 @@ package org.eevolution.ui.gwt.client.domain;
 import java.io.Serializable;
 import javax.persistence.*;
 
-import net.sf.gilead.pojo.java5.LightEntity;
+import net.sf.gilead.pojo.gwt.LightEntity;
 
 import java.sql.Timestamp;
 //import java.math.BigDecimal;

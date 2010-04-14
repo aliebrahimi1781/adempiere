@@ -2,8 +2,7 @@
 <module rename-to='adempieregwt'>
   <!-- Inherit the core Web Toolkit stuff.                        -->
   <inherits name='com.google.gwt.user.User'/>
-  <!-- Gilead -->
-  <inherits name='net.sf.gilead.Gilead4Gwt'/>
+
 
   <!-- Inherit the default GWT style sheet.  You can change       -->
   <!-- the theme of your GWT application by uncommenting          -->
@@ -17,6 +16,7 @@
   <!-- Other module inherits                                      -->
   <inherits name='com.mvp4g.Mvp4gModule' />
   <inherits name="com.allen_sauer.gwt.log.gwt-log-DEBUG" />
+  <inherits name="com.google.code.gwt.remoteaction.RemoteActionExtension" />
 
   <!-- Specify the app entry point class.                         -->
   <entry-point class='org.eevolution.ui.gwt.client.ADempiereGWT'/>

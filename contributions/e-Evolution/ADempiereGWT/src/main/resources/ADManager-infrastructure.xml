@@ -60,7 +60,7 @@
         
         <!-- 
         Example on how to use the HB4GWTRPCServiceExporter which combines hibernate4gwt's (now gilead) 
-        HibernateBeanManager with a GWTRPCServiceExporter. This servlet loads an in-memory--> 
+        HibernateBeanManager with a GWTRPCServiceExporter. This servlet loads an in-memory
         <bean id="BaseHibernate4GWTExporter" abstract="true" 
                 class="org.gwtwidgets.server.spring.hb4gwt.HB4GWTRPCServiceExporter"/> 
         <bean id="PojoStore" 
@@ -74,7 +74,7 @@
                 class="net.sf.gilead.core.PersistentBeanManager"> 
                 <property name="proxyStore" ref="PojoStore" /> 
                 <property name="persistenceUtil" ref="HibernateUtil"/> 
-    </bean> 
-        
+        </bean> 
+        --> 
         
 </beans>

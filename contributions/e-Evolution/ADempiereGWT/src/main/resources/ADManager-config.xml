@@ -9,7 +9,6 @@
         <context:component-scan base-package="org.eevolution.ui.gwt.client.domain" />
         
         <import resource="ADManager-infrastructure.xml" />     
-        <import resource="ADManager-mvc.xml" />      
         <!--<import resource="ADManager-mvc.xml" />
         <import resource="ADManager-webflow.xml" />
         <import resource="ADManager-security.xml" />

@@ -3,7 +3,7 @@ package org.eevolution.ui.gwt.client.domain;
 import java.io.Serializable;
 import javax.persistence.*;
 
-import net.sf.gilead.pojo.java5.LightEntity;
+import net.sf.gilead.pojo.gwt.LightEntity;
 
 /**
  * The primary key class for the ad_treenode database table.
