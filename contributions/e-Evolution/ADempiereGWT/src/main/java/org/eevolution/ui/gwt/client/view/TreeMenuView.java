@@ -55,7 +55,7 @@ public class TreeMenuView extends Composite implements ITreeView {
 
 	@Override
 	public void initialize() {
-		createTree();
+//		createTree();
 		createSuggestMenu();
 	}
 
@@ -96,4 +96,10 @@ public class TreeMenuView extends Composite implements ITreeView {
 		suggestPanel.add(suggestBox);
 	}
 
+	/**
+	 * @return the treeMenu
+	 */
+	public Tree getTreeMenu() {
+		return treeMenu;
+	}
 }

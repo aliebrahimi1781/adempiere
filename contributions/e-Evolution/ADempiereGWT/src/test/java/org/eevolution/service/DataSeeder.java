@@ -1,6 +1,6 @@
 package org.eevolution.service;
 
-import org.eevolution.ui.gwt.client.domain.ADTree;
+import org.eevolution.ui.gwt.domain.ADTree;
 
 
 /**

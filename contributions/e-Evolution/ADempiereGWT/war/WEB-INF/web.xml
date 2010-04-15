@@ -19,6 +19,40 @@
 		<param-name>contextConfigLocation</param-name>
 		<param-value>classpath*:ADManager-config.xml</param-value>
 	</context-param>
+	
+	<filter>
+		<filter-name>CharacterEncodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>CharacterEncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	    <listener>
+        <listener-class>org.eevolution.ui.gwt.server.guice.GuiceServletConfig</listener-class>
+    </listener>
+
+
+    <filter>
+        <filter-name>guiceFilter</filter-name>
+        <filter-class>com.google.inject.servlet.GuiceFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>guiceFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+	
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
@@ -53,50 +87,6 @@
             <url-pattern>/resources/*</url-pattern>
     </servlet-mapping>
     
-    <filter>
-        <filter-name>CharacterEncodingFilter</filter-name>
-        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
-        <init-param>
-            <param-name>encoding</param-name>
-            <param-value>UTF-8</param-value>
-        </init-param>
-        <init-param>
-            <param-name>forceEncoding</param-name>
-            <param-value>true</param-value>
-        </init-param>
-    </filter>
-
-
-
-    <filter-mapping>
-        <filter-name>CharacterEncodingFilter</filter-name>
-        <url-pattern>/*</url-pattern>
-    </filter-mapping>
-
-
-    <listener>
-        <listener-class>org.eevolution.ui.gwt.server.guice.GuiceServletConfig</listener-class>
-    </listener>
-
-
-    <filter>
-        <filter-name>guiceFilter</filter-name>
-        <filter-class>com.google.inject.servlet.GuiceFilter</filter-class>
-    </filter>
-
-    <filter-mapping>
-        <filter-name>guiceFilter</filter-name>
-        <url-pattern>/*</url-pattern>
-    </filter-mapping>
-
-
-
-    <listener>
-        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-    </listener>
-   
-  
-
 
     <servlet-mapping> 
         <servlet-name>remoteLoggerServiceImpl</servlet-name> 
@@ -106,7 +96,7 @@
 
 
 	<!-- SpringGwt remote service servlet -->	
-	<servlet>
+	<!--<servlet>
 		<servlet-name>jUnitHostImpl</servlet-name>
 		<servlet-class>com.google.gwt.junit.server.JUnitHostImpl</servlet-class>
 	</servlet>
@@ -115,7 +105,7 @@
 		<url-pattern>/com.theartoftech.gwt20example.Application/junithost</url-pattern>
 	</servlet-mapping>
 
-	<!-- required to enable Spring 3.0 REST support -->
+	--><!-- required to enable Spring 3.0 REST support -->
 	<!--filter>
 		<filter-name>httpMethodFilter</filter-name>
 		<filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
@@ -152,11 +142,11 @@
         <url-pattern>/adempieregwt/gwt-log</url-pattern> 
     </servlet-mapping>
 
-	<session-config>
+	<!--<session-config>
 		<session-timeout>10</session-timeout>
 	</session-config>
 
-    <!--welcome-file-list>
+    --><!--welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list-->
 

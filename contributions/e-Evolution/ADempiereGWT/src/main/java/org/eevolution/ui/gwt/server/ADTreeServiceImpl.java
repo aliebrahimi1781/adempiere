@@ -2,13 +2,16 @@ package org.eevolution.ui.gwt.server;
 
 import java.util.List;
 
-import org.eevolution.dao.GenericDAOWithJPA;
 import org.eevolution.ui.gwt.client.ADTreeService;
-import org.eevolution.ui.gwt.client.domain.ADTree;
+import org.eevolution.ui.gwt.domain.ADTree;
+import org.eevolution.ui.gwt.server.dao.GenericDAOWithJPA;
 
+import org.springframework.beans.factory.annotation.Autowire;
+import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * This is a service layer implementation for {@link AccountService}. Note that
@@ -18,14 +21,14 @@ import org.springframework.stereotype.Service;
  * This class also provides the functionality of the repository. More
  * 
  */
-@Service("ADTreeService")
-@Controller
-@Repository
+@Configurable(autowire=Autowire.BY_TYPE)
+@SuppressWarnings("serial")
 public class ADTreeServiceImpl extends GenericDAOWithJPA<ADTree, Long> implements ADTreeService {
 	
-	// custom repository method
+	@SuppressWarnings("unchecked")
+	@Override
 	public List<ADTree> findByName(String name) {
-		return super.entityManager.createQuery("Select t from ADTree t where t.Name = :Name").setParameter("Name", name).getResultList();
+		return entityManager.createQuery("Select t from ADTree t where t.Name = :Name").setParameter("Name", name).getResultList();
 	}
 
 }

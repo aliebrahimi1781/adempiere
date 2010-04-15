@@ -1,6 +1,6 @@
 package org.eevolution.ui.gwt.client.action;
 
-import org.eevolution.ui.gwt.client.domain.ADTree;
+import org.eevolution.ui.gwt.domain.ADTree;
 
 import com.google.code.gwt.remoteaction.client.Action;
 

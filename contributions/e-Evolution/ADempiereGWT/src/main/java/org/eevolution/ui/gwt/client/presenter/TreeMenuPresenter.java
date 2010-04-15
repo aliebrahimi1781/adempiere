@@ -3,14 +3,19 @@ package org.eevolution.ui.gwt.client.presenter;
 
 import java.util.List;
 
+import org.eevolution.ui.gwt.client.ADTreeService;
 import org.eevolution.ui.gwt.client.ADTreeServiceAsync;
 import org.eevolution.ui.gwt.client.ADempiereEventBus;
-import org.eevolution.ui.gwt.client.domain.ADTree;
 import org.eevolution.ui.gwt.client.view.TreeMenuView;
 import org.eevolution.ui.gwt.client.view.interfaces.ITreeView;
+import org.eevolution.ui.gwt.domain.ADTree;
 
+import com.google.code.gwt.remoteaction.client.ActionExecutionServiceAsync;
+import com.google.code.gwt.remoteaction.client.ActionProxy;
+import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
+import com.google.gwt.user.client.ui.TreeItem;
 import com.mvp4g.client.annotation.InjectService;
 import com.mvp4g.client.annotation.Presenter;
 import com.mvp4g.client.presenter.BasePresenter;
@@ -23,16 +28,19 @@ import com.mvp4g.client.presenter.BasePresenter;
 @Presenter(view=TreeMenuView.class)
 public class TreeMenuPresenter extends BasePresenter<ITreeView, ADempiereEventBus> {
 
-	private ADTreeServiceAsync service;
+	private final ADTreeServiceAsync adService = GWT.create(ADTreeService.class);
+	
 	public void onInitialize(){
 	eventBus.setWest(view.getViewWidget());
 		
-		service.findAll(new AsyncCallback<List<ADTree>>() {
+	adService.findAll(new AsyncCallback<List<ADTree>>() {
 			
 			@Override
 			public void onSuccess(List<ADTree> result) {
 				for (ADTree adTree : result) {
-					Window.alert(adTree.getName());
+//					Window.alert(adTree.getName());
+					TreeItem item = new TreeItem(adTree.getName());
+					((TreeMenuView)view).getTreeMenu().addItem(item);
 				}
 				
 			}
@@ -45,8 +53,8 @@ public class TreeMenuPresenter extends BasePresenter<ITreeView, ADempiereEventBu
 	}
 	
 	@InjectService
-	public void setService( ADTreeServiceAsync service ) { 
-        this.service = service; 
+	public void setService( ActionExecutionServiceAsync actionExecutionService ) { 
+        ((ActionProxy) adService).setActionExecutor(actionExecutionService);
 	}
 
 	public void onOpenWindow(){

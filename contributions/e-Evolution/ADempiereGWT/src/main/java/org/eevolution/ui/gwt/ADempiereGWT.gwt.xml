@@ -10,6 +10,9 @@
   <inherits name='com.google.gwt.user.theme.standard.Standard'/>
   <inherits name='pl.balon.gwt.diagrams.Diagrams'/>
   <inherits name='com.allen_sauer.gwt.dragdrop.DragAndDrop'/>
+  
+  <!--  GWT-MATH -->
+  <inherits name="com.googlecode.gwt.math.Math"/>
   <!-- <inherits name='com.google.gwt.user.theme.chrome.Chrome'/> -->
   <!-- <inherits name='com.google.gwt.user.theme.dark.Dark'/>     -->
 
@@ -23,5 +26,5 @@
 
   <!-- Specify the paths for translatable code                    -->
   <source path='client'/>
-  <source path='client/domain'/>
+  <source path='domain'/>
 </module>

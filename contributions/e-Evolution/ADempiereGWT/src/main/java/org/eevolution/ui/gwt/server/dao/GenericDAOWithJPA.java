@@ -1,4 +1,4 @@
-package org.eevolution.dao;
+package org.eevolution.ui.gwt.server.dao;
 
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
@@ -6,6 +6,8 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+
+import org.springframework.transaction.annotation.Transactional;
 
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 
@@ -22,6 +24,8 @@ import net.sf.gilead.gwt.PersistentRemoteService;
  * @param <ID>
  *            the identifier type
  */
+@SuppressWarnings("serial")
+@Transactional
 public abstract class GenericDAOWithJPA<T, ID extends Serializable> extends RemoteServiceServlet {
 
 	private Class<T> persistentClass;

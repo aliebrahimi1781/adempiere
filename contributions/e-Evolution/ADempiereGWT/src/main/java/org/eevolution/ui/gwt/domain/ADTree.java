@@ -1,4 +1,4 @@
-package org.eevolution.ui.gwt.client.domain;
+package org.eevolution.ui.gwt.domain;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
@@ -26,10 +26,10 @@ import net.sf.gilead.pojo.gwt.LightEntity;
  * The persistent class for the ad_tree database table.
  * 
  */
+@SuppressWarnings("serial")
 @Entity
 @Table(name="ad_tree")
 public class ADTree extends LightEntity implements Serializable {
-	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

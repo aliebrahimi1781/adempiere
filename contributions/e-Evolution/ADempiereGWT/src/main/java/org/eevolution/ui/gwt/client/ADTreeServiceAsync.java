@@ -2,7 +2,7 @@ package org.eevolution.ui.gwt.client;
 
 import java.util.List;
 
-import org.eevolution.ui.gwt.client.domain.ADTree;
+import org.eevolution.ui.gwt.domain.ADTree;
 
 import com.google.gwt.user.client.rpc.AsyncCallback;
 
