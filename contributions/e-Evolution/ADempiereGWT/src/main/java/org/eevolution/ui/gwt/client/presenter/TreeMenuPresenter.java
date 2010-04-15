@@ -3,9 +3,9 @@ package org.eevolution.ui.gwt.client.presenter;
 
 import java.util.List;
 
-import org.eevolution.ui.gwt.client.ADTreeService;
-import org.eevolution.ui.gwt.client.ADTreeServiceAsync;
 import org.eevolution.ui.gwt.client.ADempiereEventBus;
+import org.eevolution.ui.gwt.client.service.ADTreeService;
+import org.eevolution.ui.gwt.client.service.ADTreeServiceAsync;
 import org.eevolution.ui.gwt.client.view.TreeMenuView;
 import org.eevolution.ui.gwt.client.view.interfaces.ITreeView;
 import org.eevolution.ui.gwt.domain.ADTree;

@@ -1,6 +1,6 @@
 package org.eevolution.ui.gwt.server.guice;
 
-import org.eevolution.ui.gwt.client.ADTreeService;
+import org.eevolution.ui.gwt.client.service.ADTreeService;
 import org.eevolution.ui.gwt.server.ADTreeServiceImpl;
 import org.eevolution.ui.gwt.server.util.EntityManagerFactoryHelper;
 

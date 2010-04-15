@@ -2,7 +2,7 @@ package org.eevolution.ui.gwt.server;
 
 import java.util.List;
 
-import org.eevolution.ui.gwt.client.ADTreeService;
+import org.eevolution.ui.gwt.client.service.ADTreeService;
 import org.eevolution.ui.gwt.domain.ADTree;
 import org.eevolution.ui.gwt.server.dao.GenericDAOWithJPA;
 
