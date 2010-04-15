@@ -6,23 +6,13 @@
            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
         <!-- Scans for application @Components to deploy -->
-        <context:component-scan base-package="org.eevolution.ui.gwt.client.domain" />
+        <context:component-scan base-package="org.eevolution.ui.gwt.client" />  
+        <context:spring-configured/>
         
         <import resource="ADManager-infrastructure.xml" />     
-        <!--<import resource="ADManager-mvc.xml" />
+        <!--import resource="ADManager-mvc.xml"/>
         <import resource="ADManager-webflow.xml" />
         <import resource="ADManager-security.xml" />
         
-        --><bean id="myAspect" class="org.eevolution.ui.gwt.client.Introductions"/>
-       
-        
-        <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
-        <property name="mappings">
-        <map>
-            <entry key="/ADTreeService.rpc" value-ref="ADTreeService" />
-        </map>
-        </property>
-        </bean>
-        <bean id="ADTreeService" class="org.eevolution.ui.gwt.server.ADTreeServiceImpl"/>
-
+        <bean id="myAspect" class="org.eevolution.ui.gwt.client.Introductions"/-->
 </beans>

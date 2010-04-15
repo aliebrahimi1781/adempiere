@@ -6,6 +6,9 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+
+import com.google.gwt.user.server.rpc.RemoteServiceServlet;
+
 import net.sf.gilead.gwt.PersistentRemoteService;
 
 /**
@@ -19,7 +22,7 @@ import net.sf.gilead.gwt.PersistentRemoteService;
  * @param <ID>
  *            the identifier type
  */
-public abstract class GenericDAOWithJPA<T, ID extends Serializable> extends PersistentRemoteService {
+public abstract class GenericDAOWithJPA<T, ID extends Serializable> extends RemoteServiceServlet {
 
 	private Class<T> persistentClass;
 

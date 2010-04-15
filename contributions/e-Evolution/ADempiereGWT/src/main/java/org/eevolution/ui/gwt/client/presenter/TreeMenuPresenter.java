@@ -24,7 +24,6 @@ import com.mvp4g.client.presenter.BasePresenter;
 public class TreeMenuPresenter extends BasePresenter<ITreeView, ADempiereEventBus> {
 
 	private ADTreeServiceAsync service;
-
 	public void onInitialize(){
 	eventBus.setWest(view.getViewWidget());
 		

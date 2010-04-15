@@ -2,7 +2,7 @@
 <web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	version="2.4"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
-	<display-name>SpringADManager</display-name>
+	<display-name>ADManager</display-name>
 	<description>ADempiere Manager application</description>
 
 	<context-param>
@@ -41,52 +41,71 @@
 	<!--
 		Serves static resource content from .jar files such as spring-js.jar
 	-->
-	<servlet>
-		<servlet-name>Resource Servlet</servlet-name>
-		<servlet-class>org.springframework.js.resource.ResourceServlet</servlet-class>
-	</servlet>
-
-	<!--servlet>
-		<servlet-name>ADManager</servlet-name>
-		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-		<init-param>
-			<param-name>contextConfigLocation</param-name>
-			<param-value />
-		</init-param>
-		<load-on-startup>1</load-on-startup>
-	</servlet-->
-
-	<!--servlet-mapping>
-		<servlet-name>ADManager</servlet-name>
-		<url-pattern>/</url-pattern>
-	</servlet-mapping-->
-
-	<!--
-		Map all /resources requests to the Resource Servlet for handling
-	-->
-	<servlet-mapping>
-		<servlet-name>Resource Servlet</servlet-name>
-		<url-pattern>/resources/*</url-pattern>
-	</servlet-mapping>
-
-	<!--servlet-mapping>
-		<servlet-name>default</servlet-name>
-		<url-pattern>/static/*</url-pattern>
-	</servlet-mapping-->
+      <!--
+            Serves static resource content from .jar files such as spring-js.jar
+    -->
+    <servlet>
+            <servlet-name>Resource Servlet</servlet-name>
+            <servlet-class>org.springframework.js.resource.ResourceServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+            <servlet-name>Resource Servlet</servlet-name>
+            <url-pattern>/resources/*</url-pattern>
+    </servlet-mapping>
+    
+    <filter>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>forceEncoding</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
 
 
-	<!-- SpringGwt remote service servlet -->
-	<servlet>
-		<servlet-name>springGwtRemoteServiceServlet</servlet-name>
-		<servlet-class>org.spring4gwt.server.SpringGwtRemoteServiceServlet</servlet-class>
-	</servlet>
 
-	<servlet-mapping>
-		<servlet-name>springGwtRemoteServiceServlet</servlet-name>
-		<url-pattern>/springGwtServices/*</url-pattern>
-	</servlet-mapping>
+    <filter-mapping>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
 
-	
+
+    <listener>
+        <listener-class>org.eevolution.ui.gwt.server.guice.GuiceServletConfig</listener-class>
+    </listener>
+
+
+    <filter>
+        <filter-name>guiceFilter</filter-name>
+        <filter-class>com.google.inject.servlet.GuiceFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>guiceFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+
+
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+   
+  
+
+
+    <servlet-mapping> 
+        <servlet-name>remoteLoggerServiceImpl</servlet-name> 
+        <url-pattern>/adempieregwt/gwt-log</url-pattern> 
+    </servlet-mapping>
+        
+
+
+	<!-- SpringGwt remote service servlet -->	
 	<servlet>
 		<servlet-name>jUnitHostImpl</servlet-name>
 		<servlet-class>com.google.gwt.junit.server.JUnitHostImpl</servlet-class>
@@ -95,15 +114,6 @@
 		<servlet-name>jUnitHostImpl</servlet-name>
 		<url-pattern>/com.theartoftech.gwt20example.Application/junithost</url-pattern>
 	</servlet-mapping>
-  
-    <servlet> 
-        <servlet-name>remoteLoggerServiceImpl</servlet-name> 
-        <servlet-class>com.allen_sauer.gwt.log.server.RemoteLoggerServiceImpl</servlet-class> 
-    </servlet> 
-    <servlet-mapping> 
-        <servlet-name>remoteLoggerServiceImpl</servlet-name> 
-        <url-pattern>/adempieregwt/gwt-log</url-pattern> 
-    </servlet-mapping>
 
 	<!-- required to enable Spring 3.0 REST support -->
 	<!--filter>
@@ -133,7 +143,14 @@
 		<url-pattern>/*</url-pattern>
 	</filter-mapping-->
   
-  
+    <servlet> 
+        <servlet-name>remoteLoggerServiceImpl</servlet-name> 
+        <servlet-class>com.allen_sauer.gwt.log.server.RemoteLoggerServiceImpl</servlet-class> 
+    </servlet> 
+    <servlet-mapping> 
+        <servlet-name>remoteLoggerServiceImpl</servlet-name> 
+        <url-pattern>/adempieregwt/gwt-log</url-pattern> 
+    </servlet-mapping>
 
 	<session-config>
 		<session-timeout>10</session-timeout>
