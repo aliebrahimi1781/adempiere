@@ -1,4 +1,4 @@
-package org.eevolution.ui.gwt.server;
+package org.eevolution.ui.gwt.server.impl;
 
 import java.util.List;
 

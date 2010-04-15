@@ -1,7 +1,7 @@
 package org.eevolution.ui.gwt.server.guice;
 
 import org.eevolution.ui.gwt.client.service.ADTreeService;
-import org.eevolution.ui.gwt.server.ADTreeServiceImpl;
+import org.eevolution.ui.gwt.server.impl.ADTreeServiceImpl;
 import org.eevolution.ui.gwt.server.util.EntityManagerFactoryHelper;
 
 import net.sf.gilead.core.IPersistenceUtil;
